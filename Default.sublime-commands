@@ -1,0 +1,6 @@
+[
+    {
+        "caption": "Configure AT Code Checker",
+        "command": "configure_code_checker"
+    }
+]

@@ -1,0 +1,28 @@
+[
+	{
+		"caption": "Preferences",
+		"id": "preferences",
+		"mnemonic": "n",
+		"children":
+		[
+			{
+				"caption": "Package Settings",
+				"id": "package-settings",
+				"mnemonic": "P",
+				"children":
+				[
+					{
+						"caption": "AT Code Checker",
+						"children":
+						[
+							{
+								"caption": "Configure AT Code Checker",
+								"command": "configure_code_checker"
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+]
