@@ -1,0 +1,249 @@
+# operators borrowed from the C language.
+
+# l - define literal token.
+# r - define regular expresion token.
+# c - define code tokens.
+# s - define symbolic token.
+# x - specify the token type is to be dropped.
+# m - set the working 'mode'
+# i - include definitions from another 'mode'
+# d - delete a token type from the current mode
+
+#------------------------------------------------------------------------------
+# MODE: general
+#------------------------------------------------------------------------------
+
+m general .
+
+##### Comments
+r comment ^[ \t]*//.*$
+# This allows inline comments.
+r inline_comment [ \t]*//.*$
+
+##### White space
+r newline \n
+r tab \t
+r left_space ^[ \t]+
+r right_space [ \t]+$
+# This is a workaround for \r characters in linux.
+r ignore \r
+
+# Continuations are a home health concept. A line is continued on to the 
+# next line.
+r continuation \n[ \t]*-->
+
+##### Token types to strip out
+x left_space .
+x right_space .
+x ignore .
+x continuation .
+#x terminate_list_member .
+
+##### symbolic tokens.
+s EOF -
+s ERROR -
+
+#------------------------------------------------------------------------------
+# MODE: main
+#------------------------------------------------------------------------------
+
+m main .
+i general .
+
+r translator #[A-Z][a-zA-Z]{3,}$
+r keyword :[A-Z][a-zA-Z]{2,}([ \t]+[^\n]+)?$
+# Help custom keywords
+r keyword :HT.[A-Z][a-zA-Z]{2,}([ \t]+[^\n]+)?$
+r attribute [A-Z][a-zA-Z]{2,}
+# Report designer custom attributes.
+r attribute RD.[A-Z][a-zA-Z]{2,}
+
+#------------------------------------------------------------------------------
+# MODE: attribute
+#------------------------------------------------------------------------------
+m attribute .
+r attribute_data [^\n]*
+r ignore \r
+
+#------------------------------------------------------------------------------
+# MODE: value_attribute_space
+#------------------------------------------------------------------------------
+m value_attribute_space .
+r value_attribute_space [ ]+
+x value_attribute_space .
+r ignore \r
+
+#------------------------------------------------------------------------------
+# MODE: value_attribute
+#------------------------------------------------------------------------------
+
+m value_attribute .
+i general .
+
+l maximum !
+l not_maximum ~!
+l functional_maximum @!
+l functional_not_maximum @~!
+
+l search #
+l reverse_search ~#
+l functional_search @#
+l functional_reverse_search @~#
+
+l left_slice $
+l not_left_slice ~$
+l functional_left_slice @$
+l functional_not_left_slice @~$
+
+l right_slice %
+l not_right_slice ~%
+l functional_right_slice @%
+l functional_not_right_slice @~%
+
+l minimum &
+l not_minimum ~&
+l functional_minimum @&
+l functional_not_minimum @~&
+
+l multiply *
+l real_multiply ~*
+l functional_multiply @*
+l real_functional_multiply @~*
+
+l start_concatenate (
+l start_stack_concatenate @(
+l end_concatenate )
+
+l start_list {
+l start_stack_list @{
+l end_list }
+
+l start_apply [
+l start_stack_apply @[
+l end_apply ]
+
+l subtract -
+l real_subtract ~-
+l functional_subtract @-
+l real_functional_subtract @~-
+
+l equal =
+l not_equal ~=
+l functional_equal @=
+l functional_not_equal @~=
+
+l add +
+l real_add ~+
+l functional_add @+
+l real_functional_add @~+
+
+l piece |
+l not_piece ~|
+l functional_piece @|
+l functional_not_piece @~|
+
+l divide /
+l real_divide ~/
+l functional_divide @/
+l functional_real_divide @~/
+
+l remainder \
+l real_remainder ~\
+l functional_remainder @\
+l real_functional_remainder @~\
+
+l greater >
+l not_greater ~>
+l functional_greater @>
+l functional_not_greater @~>
+
+l less <
+l not_less ~<
+l functional_less @<
+l functional_not_less @~<
+
+l formatting :
+l functional_formatting @:
+
+l pattern_matching ?
+l not_pattern_matching ~?
+l functional_pattern_matching @?
+l functional_not_pattern_matching @~?
+
+l comma ,
+l semicolon ;
+
+l if IF{
+l functional_if @IF{
+l do DO{
+l functional_do @DO{
+
+l error ==
+
+r then [ ]
+
+# other non-operator token types
+
+r at_function @[A-Z][a-zA-Z]{2,}\([^\)]*\)
+c at_function SortRecords
+r error @SortRecords\(.*$
+r fs_function @[A-Z][a-zA-Z]
+r fs_dll_call @[a-z][A-Z]
+r fs_toolset_call @[a-z][a-z]
+
+r fs_local [A-Z]
+r assign_fs_local \^[A-Z]
+#r assign_to_list  \^\{[A-Z,\{\}]*\}
+c assign_to_list assign_to_list
+r fs_global [a-z]
+r assign_fs_global \^[a-z]
+r fs_ulist_function @[A-Z]\d+
+r fs_llist_function @[a-z]\d+
+r fs_ulist_function_rt @[A-Z]\(
+r fs_llist_function_rt @[A-Z]\(
+
+# Aliases used by home health
+r home_health_alias @@[^()]+\([^)]*\)
+
+r string ("[^"\n]*")
+#r queued_list `([^']|\n)*'
+c queued_list queued_list
+l stray_single_quote '
+r unmatched_queued_list `[^\n']*
+
+r integer \d+
+#r string \d[a-zA-Z0-9\.]+
+# non-numeric implicit literals must have at least one letter.
+#r string \d[a-zA-Z0-9\.]*[a-zA-Z\.]+[a-zA-Z0-9\.]*
+r string \d[A-Z0-9\.]*[A-Z\.]+[A-Z0-9\.]*
+r float \d+\.\d+
+
+r named_toolset @\.[a-zA-Z0-9]+\[[a-zA-Z0-9]+\]
+
+r identifier [A-Za-z][A-Za-z\d]+
+r assign_identifier \^[A-Za-z][A-Za-z\d]+
+r local_variable_definition [Vv][Aa][Rr]:\s[\sA-Za-z\d]*$
+
+#------------------------------------------------------------------------------
+# MODE: magic
+#------------------------------------------------------------------------------
+
+m magic .
+i value_attribute .
+i main .
+d attribute .
+r blank_line \n\n
+
+#------------------------------------------------------------------------------
+# MODE: list_member
+#------------------------------------------------------------------------------
+m list_member .
+i general .
+
+l start_list {
+l end_list }
+l seperate_list |
+r list_member_item [^{|}\n]+
+r newline [ \t]*\n[ \t]*
+r terminate_list_member [ \t]*\n\n
+

@@ -1,0 +1,91 @@
+# Other functionality where M-AT functions should be called instead:
+# based on WPL: M-AT Application Guidelines:
+@EZ
+@ZZ
+@NW
+
+# Call @ReadKey() instead.
+@RK
+
+# Trigger window. Use attribute ForceTriggerWindow instead.
+@TW
+
+# Manipulating computer operating system.
+@WT
+
+# Manipulating lower case list sets.
+@IL
+@DL
+@OL
+@CL
+
+# Window Manipulation and writing
+@OW
+@CW
+@Wa
+@Wb
+@Wf
+@Wh
+@Wm
+@Wn
+@Wt
+@Ww
+
+# DLLs initialization
+@Xa
+@Xb
+@Xc
+@Xd
+@Xe
+@Xf
+@Xg
+@Xh
+@Xi
+@Xj
+@Xk
+@Xl
+@Xm
+@Xn
+@Xo
+@Xp
+@Xq
+@Xr
+@Xs
+@Xt
+@Xu
+@Xv
+@Xw
+@Xx
+@Xy
+@Xz
+
+# Toolset initialization
+
+@Ya
+@Yb
+@Yc
+@Yd
+@Ye
+@Yf
+@Yg
+@Yh
+@Yi
+@Yj
+@Yk
+@Yl
+@Ym
+@Yn
+@Yo
+@Yp
+@Yq
+@Yr
+@Ys
+@Yt
+@Yu
+@Yv
+@Yw
+@Yx
+@Yy
+@Yz
+
+# DLL and toolset calls are handled elsewhere in code as listing them out would take a lot of space.
