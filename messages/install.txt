@@ -1,5 +1,3 @@
-SublimeLinter-contrib-at_code_checker
--------------------------------
 This linter plugin for SublimeLinter provides an interface to at_code_checker.
 
 ** IMPORTANT! **

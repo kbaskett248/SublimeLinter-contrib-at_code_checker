@@ -76,7 +76,6 @@ r ignore \r
 #------------------------------------------------------------------------------
 # MODE: value_attribute
 #------------------------------------------------------------------------------
-
 m value_attribute .
 i general .
 
@@ -215,7 +214,7 @@ r integer \d+
 #r string \d[a-zA-Z0-9\.]+
 # non-numeric implicit literals must have at least one letter.
 #r string \d[a-zA-Z0-9\.]*[a-zA-Z\.]+[a-zA-Z0-9\.]*
-r string \d[A-Z0-9\.]*[A-Z\.]+[A-Z0-9\.]*
+r string \d[a-zA-Z\d\.]*[a-zA-Z\.]+[a-zA-Z\d\.]*
 r float \d+\.\d+
 
 r named_toolset @\.[a-zA-Z0-9]+\[[a-zA-Z0-9]+\]

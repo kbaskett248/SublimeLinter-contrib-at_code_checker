@@ -238,10 +238,12 @@
 @FormatDisplayText
 @FormatMeditorTimestamp
 @FreeDllLibrary
+@GenerateAll
 @GenerateBarcode
 @GenerateExternalFileVersion
 @GenerateExternalFileVersionRT
 @GenerateGuid
+@GenerateNone
 @GetActiveWebSessionMenu
 @GetAllTimeZones
 @GetAuthenticatedUser
@@ -500,6 +502,7 @@
 @MarkMissingFields
 @MarkObjectAsMemoryOnly
 @MaxClientKey
+@MenuButtonClickable
 @MenuIconView
 @Message
 @MoreIndexEntries
@@ -536,6 +539,7 @@
 @OpenIndexRT
 @OpenMastConnection
 @OpenReportSession
+@OrderFields
 @PhysicalFilePath
 @Ping
 @PostClientMessage
@@ -616,6 +620,7 @@
 @ResetDistributedProcessingNexter
 @ResetProgressiveConversion
 @ResetReportFolio
+@ResetScrollPosition
 @ResetSubBodyButtons
 @RestoreObjectSnapshot
 @RetrieveDistributedProcessingIncompleteLog
@@ -757,7 +762,6 @@
 @UnloadToolset
 @UnstackMemory
 @UpdateCodeBase
-@UpdateContentGroup
 @UpdateIndexEntries
 @UpdateIndexEntriesRT
 @UpdateWorkingIndicator

@@ -11,6 +11,8 @@
 """This module exports the At_code_checker plugin class."""
 import errno
 import os
+import platform
+import re
 import subprocess
 import tempfile
 
@@ -19,18 +21,30 @@ import sublime_plugin
 
 from SublimeLinter.lint import Linter, util
 
-try:
-    from Focus.src.Managers.RingFileManager import RingFileManager
-    FILE_MANAGER = RingFileManager.getInstance()
-    FocusImported = True
-except ImportError:
-    FocusImported = False
+ring_matcher = re.compile(r"((.*?\\([^:\\\/\n]+?)\.Universe)\\([^:\\\/\n]+?)\.Ring)(?![^\\])", 
+    re.IGNORECASE)
 
 def get_linter_path():
     return os.path.join(sublime.packages_path(), 
                         'SublimeLinter-contrib-at_code_checker', 
-                        'at_code_checker', 
-                        'at_code_checker.exe')
+                        'at_code_checker')
+
+def create_dir(dir):
+    """Make the directory if it doesn't exist. If it does, just eat exception."""
+    print("Creating dir " + dir)
+    try:
+        os.makedirs(dir)
+    except OSError as e:
+        if e.errno != errno.EEXIST:
+            raise
+
+def get_env(environ_name):
+    """Return the value of the given environment variable."""
+    temp = os.getenv(environ_name)
+    if (temp is None):
+        if ('ProgramFiles' in environ_name) or ('ProgramW6432' in environ_name):
+            temp = os.getenv('ProgramFiles')
+    return temp
 
 class At_code_checker(Linter):
 
@@ -48,27 +62,24 @@ class At_code_checker(Linter):
     selectors = {}
     defaults = {}
 
+    Dir_Map = dict()
+
     @classmethod
     def which(cls, cmd):
-        linter_path = get_linter_path()
+        """Return the path for the linter executable."""
+        linter_path = os.path.join(get_linter_path(), 'at_code_checker.exe')
+
         if not os.path.exists(linter_path):
             return None
         else:
             return linter_path
 
-    # def tmpfile(self, cmd, code, suffix=''):
-    #     """Run an external executable using a temp file to pass code and return its output."""
-    #     return At_code_checker.tmpfilehelper(
-    #         cmd,
-    #         code,
-    #         suffix or self.get_tempfile_suffix(),
-    #         output_stream=self.error_stream,
-    #         env=self.env,
-    #         dir_=os.path.basename(self.filename))
-
     def tmpfile(self, cmd, code, suffix=''):
         """
         Return the result of running an executable against a temporary file containing code.
+
+        This is overridden since the location of the temp folder varies based
+        on the file.
 
         It is assumed that the executable launched by cmd can take one more argument
         which is a filename to process.
@@ -77,16 +88,23 @@ class At_code_checker(Linter):
         If env is not None, it is merged with the result of create_environment.
 
         """
+        
+        # Don't run for DataDefs or !DictionarySource
+        if 'DataDefs' in self.filename:
+            return ''
+        elif '!DictionarySource' in self.filename:
+            return ''
 
         f = None
+
         suffix = suffix or self.get_tempfile_suffix()
 
-        print('temp_dir = %s' % self.get_temp_dir())
+        print('temp_dir = %s' % self.tmpdir())
 
         try:
             with tempfile.NamedTemporaryFile(suffix=suffix, 
                                              delete=False, 
-                                             dir=self.get_temp_dir()) as f:
+                                             dir=self.tmpdir()) as f:
                 if isinstance(code, str):
                     code = code.encode('utf-8')
 
@@ -113,54 +131,93 @@ class At_code_checker(Linter):
             if f:
                 os.remove(f.name)
 
-    def get_temp_dir(self):
-        if 'SoloFocus' in self.filename:
-            return os.path.dirname(self.filename)
-        elif not FocusImported:
-            return None
-        else:
-            # ring_file = FILE_MANAGER.get_ring_file(self.view)
-            # print('ring_file = %s' % ring_file)
-            # print('ring_object = %s' % ring_file.ring_object)
-            # if (ring_file is None) or (ring_file.ring_object is None):
-            #     return None
-            # partial = ring_file.ring_object.partial_path(self.filename)
-            # print('partial = %s' % partial)
-            # try:
-            #     cache_path = ring_file.ring_object.cache_path
-            # except AttributeError:
-            #     return None
-            # if not os.path.exists(cache_path):
-            #     return None
-            # path = os.path.join(ring_file.ring_object.cache_path, partial)
-            # print('path = %s' % path)
-            # dir_ = os.path.dirname(path)
-            # print('dir_ = %s' % dir_)
-            # try:
-            #     create_dir(dir_)
-            #     return dir_
-            # except Exception:
-            #     pass
-            
-            return None
+    def tmpdir(self):
+        """Return the temp file directory for the current file.
+        
+        A map is maintained from file path to temp file directory to improve 
+        performance.
 
-def create_dir(dir):
-    # Make the directory if it doesn't exist. If it does, just eat exception
-    print("Creating dir " + dir)
-    try:
-        os.makedirs(dir)
-    except OSError as e:
-        if e.errno != errno.EEXIST:
-            raise
-            
+        """
+        dir_ = os.path.dirname(self.filename)
+        try:
+            path = At_code_checker.Dir_Map[dir_.lower()]
+            print('No need to recalculate')
+        except KeyError:
+            print('recalculating temp dir')
+            path = self.get_temp_dir()
+            At_code_checker.Dir_Map[dir_.lower()] = path
+        finally:
+            return path
+
+    def get_temp_dir(self):
+        """Compute and return the temp directory for the current file.
+
+        As long as the file is in a valid M-AT ring structure, the temp 
+        directory is in the ring's temporary cache directory. Otherwise, the 
+        default temp directory is returned.
+
+        """
+        base = tempfile.gettempdir()
+        ring_mo = ring_matcher.match(self.filename)
+        if not ring_mo:
+            return base
+        
+        universe = ring_mo.group(3) + '.Universe'
+        ring = ring_mo.group(4) + '.Ring'
+        if ('SoloFocus' in self.filename):
+            ring += '.Local'
+
+        temp_dir = self.meditech_pgmsource_cache(universe, ring)
+        if not os.path.exists(temp_dir):
+            if os.path.exists(os.path.dirname(temp_dir)):
+                try:
+                    create_dir(temp_dir)
+                except OSError as e:
+                    return base
+            else:
+                return base
+
+        codebase = os.path.basename(os.path.dirname(self.filename))
+        temp_dir = os.path.join(temp_dir, codebase)
+
+        try:
+            create_dir(temp_dir)
+        except OSError as e:
+            return base
+        else:
+            return temp_dir
+
+    @property
+    def meditech_cache_root(self):
+        """Return the root of the Meditech cache."""
+        result = None
+        try:
+            result = self._meditech_cache_root
+        except AttributeError:
+            version = int(platform.win32_ver()[1].split('.', 1)[0])
+            if (version <= 5):
+                self._meditech_cache_root = os.path.join(get_env('ALLUSERSPROFILE'), 
+                                                'Application Data', 
+                                                'Meditech')
+            else:
+                self._meditech_cache_root = os.path.join(get_env('ALLUSERSPROFILE'), 
+                                                'Meditech')
+            result = self._meditech_cache_root
+        finally:
+            return result
+
+    def meditech_pgmsource_cache(self, universe, ring):
+        """Return the PgmSource cache for the given universe and ring."""
+        return os.path.join(self.meditech_cache_root, universe, ring, '!AllUsers', 
+                            'Sys', 'PgmCache', 'Ring', 'PgmSource')
+
 
 class ConfigureCodeCheckerCommand(sublime_plugin.ApplicationCommand):
+    """Runs the built-in configuration utility for AT Code Checker."""
 
     def run(self):
 
-        configuration_path = os.path.join(sublime.packages_path(), 
-                                          'SublimeLinter-contrib-at_code_checker', 
-                                          'at_code_checker', 
-                                          'configuration.exe')
+        configuration_path = os.path.join(get_linter_path(), 'configuration.exe')
+
         if os.path.exists(configuration_path):
             subprocess.Popen(configuration_path)
