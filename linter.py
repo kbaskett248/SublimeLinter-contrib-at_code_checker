@@ -29,8 +29,7 @@ except ImportError:
 def get_linter_path():
     return os.path.join(sublime.packages_path(), 
                         'SublimeLinter-contrib-at_code_checker', 
-                        'at_code_checker', 
-                        'at_code_checker.exe')
+                        'at_code_checker')
 
 class At_code_checker(Linter):
 
@@ -50,7 +49,9 @@ class At_code_checker(Linter):
 
     @classmethod
     def which(cls, cmd):
-        linter_path = get_linter_path()
+        """Return the path for the linter executable."""
+        linter_path = os.path.join(get_linter_path(), 'at_code_checker.exe')
+
         if not os.path.exists(linter_path):
             return None
         else:
@@ -155,12 +156,11 @@ def create_dir(dir):
             
 
 class ConfigureCodeCheckerCommand(sublime_plugin.ApplicationCommand):
+    """Runs the built-in configuration utility for AT Code Checker."""
 
     def run(self):
 
-        configuration_path = os.path.join(sublime.packages_path(), 
-                                          'SublimeLinter-contrib-at_code_checker', 
-                                          'at_code_checker', 
-                                          'configuration.exe')
+        configuration_path = os.path.join(get_linter_path(), 'configuration.exe')
+
         if os.path.exists(configuration_path):
             subprocess.Popen(configuration_path)
