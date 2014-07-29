@@ -31,6 +31,15 @@ def get_linter_path():
                         'SublimeLinter-contrib-at_code_checker', 
                         'at_code_checker')
 
+def create_dir(dir):
+    """Make the directory if it doesn't exist. If it does, just eat exception."""
+    print("Creating dir " + dir)
+    try:
+        os.makedirs(dir)
+    except OSError as e:
+        if e.errno != errno.EEXIST:
+            raise
+
 class At_code_checker(Linter):
 
     """Provides an interface to at_code_checker."""
@@ -145,15 +154,6 @@ class At_code_checker(Linter):
             
             return None
 
-def create_dir(dir):
-    # Make the directory if it doesn't exist. If it does, just eat exception
-    print("Creating dir " + dir)
-    try:
-        os.makedirs(dir)
-    except OSError as e:
-        if e.errno != errno.EEXIST:
-            raise
-            
 
 class ConfigureCodeCheckerCommand(sublime_plugin.ApplicationCommand):
     """Runs the built-in configuration utility for AT Code Checker."""
