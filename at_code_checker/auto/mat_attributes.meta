@@ -2095,6 +2095,7 @@ WebComponent|SchedulingGrid|ResourceLabelComponentType|Choice
 WebComponent|SchedulingGrid|ResourceLabelDirectText|Value
 WebComponent|SchedulingGrid|SchedulingGridOID|Value
 WebComponent|SchedulingGrid|ShowCurrentTimeIndicator|Choice
+WebComponent|SchedulingGrid|TimeLabelContentStyle|Value
 WebComponent|SecondFactorAuthInput|Height|Value
 WebComponent|SecondFactorAuthInput|Width|Value
 WebComponent|SelectColumn|Images|Value
