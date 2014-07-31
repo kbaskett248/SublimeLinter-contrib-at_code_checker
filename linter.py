@@ -150,10 +150,42 @@ class At_code_checker(Linter):
             return path
 
     def get_temp_dir(self):
-        if 'solofocus' in self.filename.lower():
-            return os.path.dirname(self.filename)
+        """Compute and return the temp directory for the current file.
+
+        As long as the file is in a valid M-AT ring structure, the temp 
+        directory is in the ring's temporary cache directory. Otherwise, the 
+        default temp directory is returned.
+
+        """
+        base = tempfile.gettempdir()
+        ring_mo = ring_matcher.match(self.filename)
+        if not ring_mo:
+            return base
+
+        universe = ring_mo.group(3) + '.Universe'
+        ring = ring_mo.group(4) + '.Ring'
+        if 'SoloFocus' in self.filename:
+            ring += '.Local'
+
+        temp_dir = self.meditech_pgmsource_cache(universe, ring)
+        if not os.path.exists(temp_dir):
+            if os.path.exists(os.path.dirname(temp_dir)):
+                try:
+                    create_dir(temp_dir)
+                except OSError:
+                    return base
+            else:
+                return base
+
+        codebase = os.path.basename(os.path.dirname(self.filename))
+        temp_dir = os.path.join(temp_dir, codebase)
+
+        try:
+            create_dir(temp_dir)
+        except OSError:
+            return base
         else:
-            return tempfile.gettempdir()
+            return temp_dir
 
     @property
     def meditech_cache_root(self):
