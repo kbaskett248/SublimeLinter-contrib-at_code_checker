@@ -20,6 +20,8 @@ fs_functions_to_avoid.meta
 guration.exe
 home_health_attributes.meta
 home_health_functions.meta
+home_health_keywords.meta
+home_health_translators.meta
 indows_.pyd
 isc_.pyd
 lib.pyd
