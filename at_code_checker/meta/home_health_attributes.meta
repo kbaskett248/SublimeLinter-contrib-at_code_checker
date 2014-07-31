@@ -17,6 +17,10 @@ DataDef|LongLock|RootTT|String
 ImportExport|LongLock|FailureMessage|Value
 ImportExport|LongLock|Name|Object
 ImportExport|Object|TaskObject|Object
+Lock|ProcessLock|Folder|String
+Lock|ProcessLock|LockValue|Value
+Lock|ProcessLock|ReleaseAfter|Value
+Lock|ProcessLock|RootTT|String
 Magic|EntryPoint|Alias|Name
 ScreenComponent|Element|CheckboxLabel|Value
 ScreenPage|Component|PtctButtons|Name

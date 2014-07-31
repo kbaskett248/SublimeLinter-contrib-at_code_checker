@@ -1,6 +1,7 @@
 Alias|Alias
 DataDef|LongLock
 ImportExport|LongLock
+Lock|ProcessLock
 ScreenPage|Container
 ScreenPage|ContainerPage
 ScreenPage|EndContainer
