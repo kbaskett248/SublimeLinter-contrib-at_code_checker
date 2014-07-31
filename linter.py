@@ -54,7 +54,11 @@ class At_code_checker(Linter):
     cmd = 'at-code-checker @'
     regex = (
         r'^.+? +(?P<line>\d+) : '
-        r'(?P<message>(((?P<warning>Subroutine|Line|Local variable)|(?P<error>(Unknown M-AT function|Unknown attribute - [^ ]+ [^ ]+))) (?P<near>[^ ]+).*|.+))'
+        r'(?P<message>(('
+        r'(?P<warning>Subroutine|Line|Local variable|Do not call|List member|Unusual result type,|Unknown formal doc keyword:)|'
+        r'(?P<error>(Unknown M-AT function|Unknown attribute - [^ ]+ [^ ]+))'
+        r') '
+        r'(?P<near>[^ (]+).*|.+))'
     )
     line_col_base = (1, 1)
     tempfile_suffix = 'atcc'
