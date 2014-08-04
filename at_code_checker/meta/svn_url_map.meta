@@ -1,6 +1,7 @@
 MTUNV|S60F=https://vcfs02.meditech.com/svn/M-AT/6.0/Source/PgmSource/
 MTUNV2|S6.0.6F=https://vcfs02.meditech.com/svn/M-AT/6.0.6/Source/PgmSource/
 MTUNV2|S6.0.7F=https://vcfs02.meditech.com/svn/M-AT/6.0.7/Source/PgmSource/
+MTUNV608|S6.0.8F=http://vcfs02.meditech.com/viewvc/M-AT/6.0.8/Source/PgmSource/
 
 MTUNV|S61F=https://vcfs02.meditech.com/svn/M-AT/6.1/Source/PgmSource/
 MTUNV2|S6.1.3F=https://vcfs02.meditech.com/svn/M-AT/6.1.3/Source/PgmSource/
@@ -11,11 +12,14 @@ MTUNV3|S6.2=https://vcfs02.meditech.com/svn/M-AT/6.2/Source/PgmSource/
 
 MTCM|S61F=https://vcfs02.meditech.com/svn/M-AT/MTCM.DEVF/Source/PgmSource/
 MTCM|MTCM.DEVF=https://vcfs02.meditech.com/svn/M-AT/MTCM.DEVF/Source/PgmSource/
-# TODO: fix this.
-???|INTS61F=https://vcfs02.meditech.com/svn/M-AT/INT/6.1/Source/PgmSource/
+MTCM|INTS61F=https://vcfs02.meditech.com/svn/M-AT/INT/6.1/Source/PgmSource/
+
+# "2.0.x" rings:
+MTUNV20|S20F=http://vcfs02.meditech.com/svn/M-AT/2.0/Source/PgmSource/
+MTUNV201|S2.0.1F=http://vcfs02.meditech.com/svn/M-AT/2.0.1/Source/PgmSource/
 
 # Home Health Rings
-PTCTDEV|DEV24=//boris/maestro/FocusRepos/branches/Version.2.4.x/DEV/PgmSource
-PTCTDEV|DEV25=//boris/maestro/FocusRepos/branches/Version.2.5.x/DEV/PgmSource
-PTCTDEV|DEV26=//boris/maestro/FocusRepos/branches/Version.2.6.x/DEV/PgmSource
-PTCTDEV|DEV27=//boris/maestro/FocusRepos/branches/Version.2.7.x/DEV/PgmSource
+PTCTDEV|DEV24=svn://boris/maestro/FocusRepos/branches/Version.2.4.x/DEV/PgmSource/
+PTCTDEV|DEV25=svn://boris/maestro/FocusRepos/branches/Version.2.5.x/DEV/PgmSource/
+PTCTDEV|DEV26=svn://boris/maestro/FocusRepos/branches/Version.2.6.x/DEV/PgmSource/
+PTCTDEV|DEV27=svn://boris/maestro/FocusRepos/branches/Version.2.7.x/DEV/PgmSource/

@@ -1,0 +1,11 @@
+Alias|Alias
+DataDef|LongLock
+ImportExport|LongLock
+Lock|ProcessLock
+ScreenPage|Container
+ScreenPage|ContainerPage
+ScreenPage|EndContainer
+ScreenPage|Region
+Tree|Column
+Tree|NodeType
+Tree|Tree
