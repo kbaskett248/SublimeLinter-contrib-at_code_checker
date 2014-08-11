@@ -4,6 +4,7 @@ ImportExport|LongLock
 Lock|ProcessLock
 ScreenPage|Container
 ScreenPage|ContainerPage
+ScreenPage|ContainerRegion
 ScreenPage|EndContainer
 ScreenPage|Region
 Tree|Column
