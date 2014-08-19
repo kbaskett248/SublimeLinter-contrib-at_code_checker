@@ -3,6 +3,7 @@
 @CallDataDefIcon
 @CallDataDefList
 @CallDataDefSub
+@ExitChildReturnData
 @GetObjectLongLockValue
 @GetObjectLongLockSystemInfo
 @GetObjectLongLockValue

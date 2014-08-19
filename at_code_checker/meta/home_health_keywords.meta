@@ -1,4 +1,6 @@
 Alias|Alias
+BodyButtons|CheckBox
+BodyButtons|CheckSet
 DataDef|LongLock
 ImportExport|LongLock
 Lock|ProcessLock
@@ -8,5 +10,6 @@ ScreenPage|ContainerRegion
 ScreenPage|EndContainer
 ScreenPage|Region
 Tree|Column
+Tree|ColumnRender
 Tree|NodeType
 Tree|Tree
