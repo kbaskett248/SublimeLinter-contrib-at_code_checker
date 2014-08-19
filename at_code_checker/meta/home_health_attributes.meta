@@ -4,10 +4,14 @@ Alias|Alias|Value|Value
 BodyButtons|BodyButtons|OnAfterInit|Value
 BodyButtons|BodyButtons|OverrideViewOnly|Value
 BodyButtons|BodyButtons|VSpacing|Value
+BodyButtons|Button|StartDownCondition|Value
+BodyButtons|CheckBox|Condition|Value
 BodyButtons|CheckBox|Label|Value
 BodyButtons|CheckBox|Name|String
 BodyButtons|CheckBox|OnSelect|Value
 BodyButtons|CheckBox|OnUnselect|Value
+BodyButtons|CheckBox|ShowCondition|Value
+BodyButtons|CheckSet|OnAfterInit|Value
 BodyButtons|Row|Arrange|Value
 BodyButtons|Row|HSpacing|Value
 BodyButtons|Row|Label|Value
@@ -28,12 +32,14 @@ Lock|ProcessLock|LockValue|Value
 Lock|ProcessLock|ReleaseAfter|Value
 Lock|ProcessLock|RootTT|String
 Magic|EntryPoint|Alias|Name
+ScreenComponent|Column|BlankValue|Value
 ScreenComponent|Element|CheckboxLabel|Value
 ScreenPage|Component|CheckSet|Name
 ScreenPage|Component|PtctButtons|Name
 ScreenPage|Component|Tree|Name
 ScreenPage|Container|Arrange|Choice
 ScreenPage|Container|Align|Choice
+ScreenPage|Container|AlignContents|Value
 ScreenPage|Container|Condition|Value
 ScreenPage|Container|Hmargin|Value
 ScreenPage|Container|Icon|Value
@@ -47,6 +53,7 @@ ScreenPage|Container|MinWidth|Value
 ScreenPage|Container|ReqLegend|Value
 ScreenPage|Container|Style|Value
 ScreenPage|Container|VAlign|Choice
+ScreenPage|Container|VAlignContents|Value
 ScreenPage|Container|Vmargin|Value
 ScreenPage|ContainerPage|ExitCondition|Value
 ScreenPage|ContainerPage|OnAfterFirstRender|Value
