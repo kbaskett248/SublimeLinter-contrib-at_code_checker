@@ -60,8 +60,9 @@ class At_code_checker(Linter):
     regex = (
         r'^(?P<filename>.+?) +(?P<line>\d+) : '
         r'(?P<message>(('
-        r'(?P<warning>Subroutine|Line|Local variable|Do not call|List member|Unusual result type,|Unknown formal doc keyword:)|'
-        r'(?P<error>(Unknown M-AT function|Unknown attribute - [^ ]+ [^ ]+))'
+        r'(?P<warning>Subroutine|Line|Local variable|Do not call|List member|'
+        r'Unusual result type,|Unknown formal doc keyword:|Avoid)|'
+        r'(?P<error>(Unknown M-AT function|Unknown attribute - [^ ]+? [^ ]+))'
         r') '
         r'(?P<near>[^ (]+).*|.+))'
     )
