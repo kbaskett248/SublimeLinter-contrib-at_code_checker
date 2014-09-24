@@ -4,6 +4,14 @@ Alias|Alias|Value|Value
 BodyButtons|BodyButtons|OnAfterInit|Value
 BodyButtons|BodyButtons|OverrideViewOnly|Value
 BodyButtons|BodyButtons|VSpacing|Value
+BodyButtons|Button|StartDownCondition|Value
+BodyButtons|CheckBox|Condition|Value
+BodyButtons|CheckBox|Label|Value
+BodyButtons|CheckBox|Name|String
+BodyButtons|CheckBox|OnSelect|Value
+BodyButtons|CheckBox|OnUnselect|Value
+BodyButtons|CheckBox|ShowCondition|Value
+BodyButtons|CheckSet|OnAfterInit|Value
 BodyButtons|Row|Arrange|Value
 BodyButtons|Row|HSpacing|Value
 BodyButtons|Row|Label|Value
@@ -14,6 +22,8 @@ DataDef|LongLock|Folder|String
 DataDef|LongLock|LockValue|Value
 DataDef|LongLock|ReleaseAfter|Value
 DataDef|LongLock|RootTT|String
+Graph|Graph|HeightPixels|Value
+Graph|Graph|WidthPixels|Value
 ImportExport|LongLock|FailureMessage|Value
 ImportExport|LongLock|Name|Object
 ImportExport|Object|TaskObject|Object
@@ -22,10 +32,14 @@ Lock|ProcessLock|LockValue|Value
 Lock|ProcessLock|ReleaseAfter|Value
 Lock|ProcessLock|RootTT|String
 Magic|EntryPoint|Alias|Name
+ScreenComponent|Column|BlankValue|Value
 ScreenComponent|Element|CheckboxLabel|Value
+ScreenPage|Component|CheckSet|Name
 ScreenPage|Component|PtctButtons|Name
+ScreenPage|Component|Tree|Name
 ScreenPage|Container|Arrange|Choice
 ScreenPage|Container|Align|Choice
+ScreenPage|Container|AlignContents|Value
 ScreenPage|Container|Condition|Value
 ScreenPage|Container|Hmargin|Value
 ScreenPage|Container|Icon|Value
@@ -39,6 +53,7 @@ ScreenPage|Container|MinWidth|Value
 ScreenPage|Container|ReqLegend|Value
 ScreenPage|Container|Style|Value
 ScreenPage|Container|VAlign|Choice
+ScreenPage|Container|VAlignContents|Value
 ScreenPage|Container|Vmargin|Value
 ScreenPage|ContainerPage|ExitCondition|Value
 ScreenPage|ContainerPage|OnAfterFirstRender|Value
@@ -50,6 +65,7 @@ Tree|Column|Width|Value
 Tree|NodeType|NodeRender|Value
 Tree|NodeType|OnClick|Value
 Tree|NodeType|OnCollapse|Value
+Tree|NodeType|OnColumnClick|Value
 Tree|NodeType|OnExit|Value
 Tree|NodeType|OnExpand|Value
 Tree|NodeType|OnRightClick|Value

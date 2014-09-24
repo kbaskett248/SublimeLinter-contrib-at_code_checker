@@ -794,6 +794,9 @@
 @WebPdfViewCleanup
 @WebSchGridEventLowlight
 @WebSchGridSetScrollPos
+@WebSessionResume
+@WebSessionResumeFailed
+@WebSessionSuspend
 @WindowDrawn
 @WithinNestedLookup
 @WriteLogEvent
