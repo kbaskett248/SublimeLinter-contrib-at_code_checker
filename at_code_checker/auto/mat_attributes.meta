@@ -1789,7 +1789,14 @@ WebComponent|Meditor|Method|Choice
 WebComponent|Meditor|ModeUndoRedo|Value
 WebComponent|Meditor|ModeViewEdit|Value
 WebComponent|Meditor|OnChange|Value
+WebComponent|Meditor|OnInitialRender|Value
+WebComponent|Meditor|OnRender|Value
 WebComponent|Meditor|RID|Value
+WebComponent|Meditor|ToolbarAppButtonAltText|Value
+WebComponent|Meditor|ToolbarAppButtonCallback|Value
+WebComponent|Meditor|ToolbarAppButtonToolTip|Value
+WebComponent|Meditor|ToolbarContentStyle|Value
+WebComponent|Meditor|Toolbar|Choice
 WebComponent|Meditor|Value|Value
 WebComponent|MenuBlank|ShowCondition|Value
 WebComponent|MenuBlank|Width|Value
@@ -1871,6 +1878,8 @@ WebComponent|PanelItem|Spacer|Value
 WebComponent|PanelItem|ValidationFailureExempt|Choice
 WebComponent|PanelItem|Value|Value
 WebComponent|PanelItem|Width|Value
+WebComponent|PanelItem|ZoomArgs|Value
+WebComponent|PanelItem|Zoom|Keyword
 WebComponent|RTBlank|BorderStyle|Value
 WebComponent|RTBlank|CellFlags|Value
 WebComponent|RTBlank|ContentStyle|Value
