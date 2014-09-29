@@ -58,13 +58,14 @@ class At_code_checker(Linter):
     syntax = ('m-at', 'focus')
     cmd = 'at-code-checker @'
     regex = (
-        r'^(?P<filename>.+?) +(?P<line>\d+) : '
-        r'(?P<message>(('
-        r'(?P<warning>Subroutine|Line|Local variable|Do not call|List member|'
-        r'Unusual result type,|Unknown formal doc keyword:|Avoid)|'
-        r'(?P<error>(Unknown M-AT function|Unknown attribute - [^ ]+? [^ ]+))'
-        r') '
-        r'(?P<near>[^ (]+).*|.+))'
+        r"^(?P<filename>.+?) +(?P<line>\d+) : "
+        r"(?P<message>(("
+        r"(?P<warning>Subroutine|Line|Local variable|Do not call|List member|"
+        r"Unusual result type,|Unknown formal doc keyword:|Avoid|"
+        r"Button with no defined)|"
+        r"(?P<error>(Unknown M-AT function|Unknown attribute - [^ ]+? [^ ]+))"
+        r") "
+        r"(?P<near>[^ (]+).*|.+))"
     )
     line_col_base = (1, 1)
     tempfile_suffix = 'atcc'
