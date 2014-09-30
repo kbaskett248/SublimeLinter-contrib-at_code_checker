@@ -15,6 +15,7 @@ di_.pyd
 dlls_to_exclude.meta
 e30u_net_vc90.dll
 e30u_vc90.dll
+et.pyd
 existing_files.dat
 fs_functions.meta
 fs_functions_to_avoid.meta
@@ -42,6 +43,7 @@ n_wc-1.dll
 ontrols_.pyd
 ore_.pyd
 pen.exe
+pyd
 r-1.dll
 release_name.meta
 riconv-1.dll
