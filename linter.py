@@ -62,7 +62,7 @@ class At_code_checker(Linter):
         r"(?P<message>(("
         r"(?P<warning>Subroutine|Line|Local variable|Do not call|List member|"
         r"Unusual result type,|Unknown formal doc keyword:|Avoid|"
-        r"Button with no defined|Unassigned #Local)|"
+        r"Button with no defined|Unassigned #Local|Use @OV rather than)|"
         r"(?P<error>(Unknown M-AT function|Unknown attribute - [^ ]+? [^ ]+|"
         r"Undefined #Local))"
         r") "
