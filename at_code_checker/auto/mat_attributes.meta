@@ -902,7 +902,9 @@ Screen|Session|OnWebPdfViewerMessage|Value
 Screen|Session|OnWebSessionBarExit|Value
 Screen|Session|OnWebSessionBarMessage|Value
 Screen|Session|ShowLookupIcon|Value
+Screen|Session|WebSessionAltTitle|Value
 Screen|Session|WebSessionMenuGroup|Value
+Screen|Session|WebSessionSignonInfo|Value
 SearchRecords|Column|Align|Choice
 SearchRecords|Column|LabelAlign|Choice
 SearchRecords|Column|Label|Value
@@ -945,7 +947,8 @@ Search|Column|LabelAlign|Choice
 Search|Column|Label|Value
 Search|Column|ShowCondition|Value
 Search|Column|Value|Value
-Search|IndexKey|Match|value
+Search|IndexKey|MatchAll|Choice
+Search|IndexKey|Match|Value
 Search|IndexKey|Name|Object
 Search|Method|DescriptorText|Value
 Search|Method|DetailDisplay|String
@@ -2398,7 +2401,9 @@ WebRoutine|Program|TextInputStyle|String
 WebRoutine|Program|TimedEventInterval|Value
 WebRoutine|Program|TimedEvent|Value
 WebRoutine|Program|Title|Value
+WebRoutine|Program|WebSessionAltTitle|Value
 WebRoutine|Program|WebSessionMenuGroup|Value
+WebRoutine|Program|WebSessionSignonInfo|Value
 WebRoutine|Redirection|DesktopRedirect|Value
 WebRoutine|Redirection|PhoneRedirect|Value
 WebRoutine|Redirection|TabletRedirect|Value
