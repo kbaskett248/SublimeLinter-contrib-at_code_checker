@@ -34,6 +34,7 @@ Lock|ProcessLock|RootTT|String
 Magic|EntryPoint|Alias|Name
 ScreenComponent|Column|BlankValue|Value
 ScreenComponent|Element|CheckboxLabel|Value
+ScreenComponent|Index|OnSelectDown|Value
 ScreenPage|Component|CheckSet|Name
 ScreenPage|Component|PtctButtons|Name
 ScreenPage|Component|Tree|Name
