@@ -327,6 +327,7 @@
 @GetNextLogEvents
 @GetNumberPadValues
 @GetOID
+@GetPageIcon
 @GetParentProcessID
 @GetPreviousPage
 @GetPriorLogEvents
@@ -451,6 +452,8 @@
 @IntraObjectIndexPath
 @InvokeDllFunction
 @IsWebAssistedEntryForced
+@JsonDecode
+@JsonEncode
 @Key
 @KeyList
 @KeyRT
@@ -789,6 +792,7 @@
 @WebBreak
 @WebClearSelectValues
 @WebLogoff
+@WebMeditorInsert
 @WebOpenPrintDialog
 @WebPdfView
 @WebPdfViewCleanup
