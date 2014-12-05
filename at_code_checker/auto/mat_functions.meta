@@ -792,11 +792,13 @@
 @WebOpenPrintDialog
 @WebPdfView
 @WebPdfViewCleanup
+@WebRegisterFile
 @WebSchGridEventLowlight
 @WebSchGridSetScrollPos
 @WebSessionResume
 @WebSessionResumeFailed
 @WebSessionSuspend
+@WebUnregisterFile
 @WindowDrawn
 @WithinNestedLookup
 @WriteLogEvent

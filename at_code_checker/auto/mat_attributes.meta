@@ -902,7 +902,9 @@ Screen|Session|OnWebPdfViewerMessage|Value
 Screen|Session|OnWebSessionBarExit|Value
 Screen|Session|OnWebSessionBarMessage|Value
 Screen|Session|ShowLookupIcon|Value
+Screen|Session|WebSessionAltTitle|Value
 Screen|Session|WebSessionMenuGroup|Value
+Screen|Session|WebSessionSignonInfo|Value
 SearchRecords|Column|Align|Choice
 SearchRecords|Column|LabelAlign|Choice
 SearchRecords|Column|Label|Value
@@ -945,7 +947,8 @@ Search|Column|LabelAlign|Choice
 Search|Column|Label|Value
 Search|Column|ShowCondition|Value
 Search|Column|Value|Value
-Search|IndexKey|Match|value
+Search|IndexKey|MatchAll|Choice
+Search|IndexKey|Match|Value
 Search|IndexKey|Name|Object
 Search|Method|DescriptorText|Value
 Search|Method|DetailDisplay|String
@@ -1789,7 +1792,14 @@ WebComponent|Meditor|Method|Choice
 WebComponent|Meditor|ModeUndoRedo|Value
 WebComponent|Meditor|ModeViewEdit|Value
 WebComponent|Meditor|OnChange|Value
+WebComponent|Meditor|OnInitialRender|Value
+WebComponent|Meditor|OnRender|Value
 WebComponent|Meditor|RID|Value
+WebComponent|Meditor|ToolbarAppButtonAltText|Value
+WebComponent|Meditor|ToolbarAppButtonCallback|Value
+WebComponent|Meditor|ToolbarAppButtonToolTip|Value
+WebComponent|Meditor|ToolbarContentStyle|Value
+WebComponent|Meditor|Toolbar|Choice
 WebComponent|Meditor|Value|Value
 WebComponent|MenuBlank|ShowCondition|Value
 WebComponent|MenuBlank|Width|Value
@@ -1871,6 +1881,8 @@ WebComponent|PanelItem|Spacer|Value
 WebComponent|PanelItem|ValidationFailureExempt|Choice
 WebComponent|PanelItem|Value|Value
 WebComponent|PanelItem|Width|Value
+WebComponent|PanelItem|ZoomArgs|Value
+WebComponent|PanelItem|Zoom|Keyword
 WebComponent|RTBlank|BorderStyle|Value
 WebComponent|RTBlank|CellFlags|Value
 WebComponent|RTBlank|ContentStyle|Value
@@ -2389,7 +2401,9 @@ WebRoutine|Program|TextInputStyle|String
 WebRoutine|Program|TimedEventInterval|Value
 WebRoutine|Program|TimedEvent|Value
 WebRoutine|Program|Title|Value
+WebRoutine|Program|WebSessionAltTitle|Value
 WebRoutine|Program|WebSessionMenuGroup|Value
+WebRoutine|Program|WebSessionSignonInfo|Value
 WebRoutine|Redirection|DesktopRedirect|Value
 WebRoutine|Redirection|PhoneRedirect|Value
 WebRoutine|Redirection|TabletRedirect|Value
