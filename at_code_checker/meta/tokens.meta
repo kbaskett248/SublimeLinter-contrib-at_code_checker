@@ -42,6 +42,8 @@ x continuation .
 ##### symbolic tokens.
 s EOF -
 s ERROR -
+s open_sort_records -
+s close_sort_records -
 
 #------------------------------------------------------------------------------
 # MODE: main
@@ -50,13 +52,13 @@ s ERROR -
 m main .
 i general .
 
-r translator #[A-Z][a-zA-Z]{3,}$
-r keyword :[A-Z][a-zA-Z]{2,}([ \t]+[^\n]+)?$
+r translator #[A-Z][a-zA-Z\d]{3,}$
+r keyword :[A-Z][a-zA-Z\d]{2,}([ \t]+[^\n]+)?$
 # Help custom keywords
-r keyword :HT.[A-Z][a-zA-Z]{2,}([ \t]+[^\n]+)?$
-r attribute [A-Z][a-zA-Z]{2,}
+r keyword :HT.[A-Z][a-zA-Z\d]{2,}([ \t]+[^\n]+)?$
+r attribute [A-Z][a-zA-Z\d]{2,}
 # Report designer custom attributes.
-r attribute RD.[A-Z][a-zA-Z]{2,}
+r attribute RD.[A-Z][a-zA-Z\d]{2,}
 
 #------------------------------------------------------------------------------
 # MODE: attribute
