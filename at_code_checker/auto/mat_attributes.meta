@@ -122,7 +122,7 @@ DataDef|VersionSequence|Type|Choice
 DataDef|Version|CodeBase|String
 DataDef|Version|Conversion|String
 DataDef|Version|Custom|Yes/No
-DataDef|Version|NoOp|Yes/No
+DataDef|Version|NoOp|Value
 DataDef|Version|Number|Decimal
 DataDef|Version|Program|String
 DataDef|Version|Release|String
@@ -372,6 +372,7 @@ ReportFrame|Cell|FontStyle|Choice
 ReportFrame|Cell|HorizLinePlacement|Choice
 ReportFrame|Cell|HorizLineWidth|Integer
 ReportFrame|Cell|HorizLine|Decimal
+ReportFrame|Cell|ImageCached|Yes/No
 ReportFrame|Cell|ImageHeight|Value
 ReportFrame|Cell|ImageWidth|Value
 ReportFrame|Cell|Italic|Yes/No
@@ -729,6 +730,7 @@ ScreenComponent|Grid|ColumnLoadCallback|Value
 ScreenComponent|Grid|FocXgridOID|Value
 ScreenComponent|Grid|GridOnClick|Value
 ScreenComponent|Grid|InitialColumnRID|Value
+ScreenComponent|Grid|SectionOnExpandCollapse|Value
 ScreenComponent|Index|CDQuery|Value
 ScreenComponent|Index|ComponentLabelClick|Value
 ScreenComponent|Index|ComponentLabelStyle|Value
@@ -1851,6 +1853,7 @@ WebComponent|PDFFile|AltText|Value
 WebComponent|PDFFile|AppId|Value
 WebComponent|PDFFile|Data|Value
 WebComponent|PDFFile|Height|Value
+WebComponent|PDFFile|UseJavascriptViewer|Yes/No
 WebComponent|PDFFile|Width|Value
 WebComponent|PanelItem|AlignStyle|Value
 WebComponent|PanelItem|BorderStyle|Value
@@ -2042,6 +2045,7 @@ WebComponent|RepeatingPanel|MinWidth|Value
 WebComponent|RepeatingPanel|OnClick|Value
 WebComponent|RepeatingPanel|OnRequestAdditional|Value
 WebComponent|RepeatingPanel|OnRightClick|Value
+WebComponent|RepeatingPanel|RequestAdditionalPagesLeft|Value
 WebComponent|RepeatingPanel|Scroll|Choice
 WebComponent|RepeatingPanel|SuppressIterationItem|Value
 WebComponent|RepeatingPanel|Tabular|Yes/No
@@ -2057,6 +2061,9 @@ WebComponent|RetractingControl|DetailRT|Value
 WebComponent|RetractingControl|DetailType|Choice
 WebComponent|RetractingControl|Direction|Choice
 WebComponent|RetractingControl|Disable|Value
+WebComponent|RetractingControl|FooterName|String
+WebComponent|RetractingControl|FooterRT|Value
+WebComponent|RetractingControl|FooterType|Choice
 WebComponent|RetractingControl|HeaderName|String
 WebComponent|RetractingControl|HeaderRT|Value
 WebComponent|RetractingControl|HeaderType|Choice
@@ -2333,7 +2340,6 @@ WebRegion|Row|LeftMargin|Decimal
 WebRegion|Row|OnAccordionFirstRender|Value
 WebRegion|Row|ShowCondition|Value
 WebRegion|Row|SuppressFromPrint|Choice
-WebRegion|Row|TemporaryIdentifier|Value
 WebRoutine|ArrangedItem|Arrangement|String
 WebRoutine|ArrangedItem|MaxWidthInChar|Value
 WebRoutine|ArrangedItem|Panel|String
