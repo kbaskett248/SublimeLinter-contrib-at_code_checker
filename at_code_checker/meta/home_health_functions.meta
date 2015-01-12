@@ -25,6 +25,7 @@
 @ProcessLongLockStillOwned
 @ReleaseForeignObjectLongLock
 @ReleaseForeignProcessLongLock
+@TimeStampEffectiveDateTime
 @TreeRoot
 @UnlockLongMulti
 @UnlockObjectLong
