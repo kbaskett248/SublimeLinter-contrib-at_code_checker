@@ -48,7 +48,7 @@ DataDef|Field|Length|Value
 DataDef|Field|Offset|String
 DataDef|Field|Pointer|ObjectClass
 DataDef|Field|Precision|Value
-DataDef|File|CacheLocally|Yes/No
+DataDef|File|CacheLocally|Yes/No/InDataCenter
 DataDef|File|FileFormat|Choice
 DataDef|File|Folder|String
 DataDef|File|GoverningMutex|Object
@@ -1607,7 +1607,7 @@ WebComponent|InputText|TextInputStyle|Value
 WebComponent|InputText|TypeAheadLookup|Value
 WebComponent|InputText|ValidationParams|Value
 WebComponent|InputText|Value|Value
-WebComponent|InputText|WidthUnits|Value
+WebComponent|InputText|WidthUnits|Choice
 WebComponent|InputText|Width|Value
 WebComponent|InputToggle|Choices|Value
 WebComponent|InputToggle|DisabledBorderStyle|Value
@@ -2228,6 +2228,7 @@ WebComponent|TypeAheadLookup|MinMatchChars|Value
 WebComponent|TypeAheadLookup|ResultsBorderStyle|Value
 WebComponent|TypeAheadLookup|ResultsContentStyle|Value
 WebComponent|TypeAheadLookup|ShowLookupIcon|Yes/No
+WebComponent|TypeAheadLookup|WebRoutine|Value
 WebComponent|VerticalPanel|AlwaysShowScrollbars|Yes/No
 WebComponent|VerticalPanel|BorderStyle|Value
 WebComponent|VerticalPanel|Clickable|Value
@@ -2364,6 +2365,7 @@ WebRoutine|ChildRoutine|CloseOnOutsideClick|Value
 WebRoutine|ChildRoutine|ContentStyle|Value
 WebRoutine|ChildRoutine|Dimensions|Value
 WebRoutine|ChildRoutine|GrayOutBackground|Value
+WebRoutine|ChildRoutine|OnTypeAheadSeedChange|Value
 WebRoutine|ChildRoutine|OutsideClickReturnValue|Value
 WebRoutine|ChildRoutine|PassOutsideClickToParent|Value
 WebRoutine|ChildRoutine|Size|Value
