@@ -175,9 +175,9 @@ class At_code_checker(Linter):
         dir_ = os.path.dirname(self.filename)
         try:
             path = At_code_checker.Dir_Map[dir_.lower()]
-            # print('No need to recalculate')
+            if not os.path.isdir(path):
+                create_dir(path)
         except KeyError:
-            # print('recalculating temp dir')
             path = self.get_temp_dir()
             At_code_checker.Dir_Map[dir_.lower()] = path
         finally:
