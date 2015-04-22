@@ -230,12 +230,11 @@ class At_code_checker(Linter):
         except AttributeError:
             version = int(platform.win32_ver()[1].split('.', 1)[0])
             if (version <= 5):
-                self._meditech_cache_root = os.path.join(get_env('ALLUSERSPROFILE'),
-                                                'Application Data',
-                                                'Meditech')
+                self._meditech_cache_root = os.path.join(
+                    get_env('ALLUSERSPROFILE'), 'Application Data', 'Meditech')
             else:
-                self._meditech_cache_root = os.path.join(get_env('ALLUSERSPROFILE'),
-                                                'Meditech')
+                self._meditech_cache_root = os.path.join(
+                    get_env('ALLUSERSPROFILE'), 'Meditech')
             result = self._meditech_cache_root
         finally:
             return result
