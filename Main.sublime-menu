@@ -24,5 +24,25 @@
 				]
 			}
 		]
-	}
+	},
+	{
+        "id": "help",
+        "children":
+        [
+            {
+                "id": "package-help",
+                "children":
+                [
+                    {
+						"caption": "AT Code Checker",
+						"command": "open_web_page",
+						"args": {
+							"url": "http://stxwiki.meditech.com/wiki11/M-AT_Code_Checker"
+						}
+					}
+                ]
+                
+            }
+        ]
+    }
 ]

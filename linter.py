@@ -15,6 +15,7 @@ import platform
 import re
 import subprocess
 import tempfile
+import webbrowser
 
 import sublime
 import sublime_plugin
@@ -254,3 +255,13 @@ class ConfigureCodeCheckerCommand(sublime_plugin.ApplicationCommand):
 
         if os.path.exists(configuration_path):
             subprocess.Popen(configuration_path)
+
+
+class OpenWebPageCommand(sublime_plugin.WindowCommand):
+
+    def run(self, url=''):
+        if url:
+            webbrowser.open(url)
+
+    def is_visible(self, url=''):
+        return bool(url)
