@@ -327,6 +327,7 @@
 @GetNextLogEvents
 @GetNumberPadValues
 @GetOID
+@GetPageIcon
 @GetParentProcessID
 @GetPreviousPage
 @GetPriorLogEvents
@@ -380,6 +381,7 @@
 @GotoWebComponent
 @GotoWebLink
 @GotoWebPage
+@GridClearStates
 @GridGetFocus
 @GridNextRow
 @GridPrevRow
@@ -393,9 +395,11 @@
 @ImageAppend
 @ImageAppendEnd
 @ImageAppendTop
+@ImageData
 @ImageInsert
 @ImageInsertTop
 @ImageJoin
+@ImageUpdate
 @ImportFile
 @ImportFileBatchesToStackWhile
 @ImportFileBatchesWhile
@@ -451,6 +455,8 @@
 @IntraObjectIndexPath
 @InvokeDllFunction
 @IsWebAssistedEntryForced
+@JsonDecode
+@JsonEncode
 @Key
 @KeyList
 @KeyRT
@@ -540,6 +546,7 @@
 @OpenMastConnection
 @OpenReportSession
 @OrderFields
+@OverrideWebRequestTimeout
 @PhysicalFilePath
 @Ping
 @PostClientMessage
@@ -625,6 +632,7 @@
 @RestoreObjectSnapshot
 @RetrieveDistributedProcessingIncompleteLog
 @RetrieveExternalFile
+@RetrieveExternalFileCx
 @RetrieveExternalFileRT
 @RetrieveField
 @RetrieveFieldExternal
@@ -789,6 +797,7 @@
 @WebBreak
 @WebClearSelectValues
 @WebLogoff
+@WebMeditorInsert
 @WebOpenPrintDialog
 @WebPdfView
 @WebPdfViewCleanup

@@ -15,6 +15,7 @@ import platform
 import re
 import subprocess
 import tempfile
+import webbrowser
 
 import sublime
 import sublime_plugin
@@ -175,9 +176,9 @@ class At_code_checker(Linter):
         dir_ = os.path.dirname(self.filename)
         try:
             path = At_code_checker.Dir_Map[dir_.lower()]
-            # print('No need to recalculate')
+            if not os.path.isdir(path):
+                create_dir(path)
         except KeyError:
-            # print('recalculating temp dir')
             path = self.get_temp_dir()
             At_code_checker.Dir_Map[dir_.lower()] = path
         finally:
@@ -230,12 +231,11 @@ class At_code_checker(Linter):
         except AttributeError:
             version = int(platform.win32_ver()[1].split('.', 1)[0])
             if (version <= 5):
-                self._meditech_cache_root = os.path.join(get_env('ALLUSERSPROFILE'),
-                                                'Application Data',
-                                                'Meditech')
+                self._meditech_cache_root = os.path.join(
+                    get_env('ALLUSERSPROFILE'), 'Application Data', 'Meditech')
             else:
-                self._meditech_cache_root = os.path.join(get_env('ALLUSERSPROFILE'),
-                                                'Meditech')
+                self._meditech_cache_root = os.path.join(
+                    get_env('ALLUSERSPROFILE'), 'Meditech')
             result = self._meditech_cache_root
         finally:
             return result
@@ -255,3 +255,13 @@ class ConfigureCodeCheckerCommand(sublime_plugin.ApplicationCommand):
 
         if os.path.exists(configuration_path):
             subprocess.Popen(configuration_path)
+
+
+class OpenWebPageCommand(sublime_plugin.WindowCommand):
+
+    def run(self, url=''):
+        if url:
+            webbrowser.open(url)
+
+    def is_visible(self, url=''):
+        return bool(url)
