@@ -1,0 +1,5 @@
+Updated AT Code Checker to v2015.01.09 "Promtheus"
+
+Added a link to the AT Code Checker documentation, available from Help > Packages > AT Code Checker.
+
+Fixed a bug that could occur when determining the name of the results file.
