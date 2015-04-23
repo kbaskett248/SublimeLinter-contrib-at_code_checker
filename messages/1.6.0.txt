@@ -1,0 +1,11 @@
+Updating AT Code Checker to v2015.04.22 "Atlas"
+
+	- Localization checks have been added to support efforts to translate our software into multiple languages. 
+	  These checks are disabled by default.
+
+	- Code checker messages can now be turned on or off within the source code.
+
+	- Added spell checking and a custom word list. These checks are disabled by default.
+    
+	- Added check for duplicate hotkeys as part of the missing hotkey check. This doesn't consider mutually exclusive 
+	  condition/show condition combinations yet.
