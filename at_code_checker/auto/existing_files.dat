@@ -4,6 +4,9 @@
 30u_html_vc90.dll
 48.dll
 CheckerFetch.mps
+CheckerLocalization.mps
+I18N_attributes.meta
+I18N_rings.meta
 MT16X16.ICO
 Y32.dll
 _svn.dll
@@ -54,4 +57,5 @@ svn_url_map.meta
 t.pyd
 tokens.meta
 version.meta
+words.meta
 yd

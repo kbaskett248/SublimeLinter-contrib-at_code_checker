@@ -37,7 +37,6 @@ x left_space .
 x right_space .
 x ignore .
 x continuation .
-#x terminate_list_member .
 
 ##### symbolic tokens.
 s EOF -
@@ -58,7 +57,7 @@ r keyword :[A-Z][a-zA-Z\d]{2,}([ \t]+[^\n]+)?$
 r keyword :HT.[A-Z][a-zA-Z\d]{2,}([ \t]+[^\n]+)?$
 r attribute [A-Z][a-zA-Z\d]{2,}
 # Report designer custom attributes.
-r attribute RD.[A-Z][a-zA-Z\d]{2,}
+r attribute RD\.[A-Z][a-zA-Z\d]{2,}
 
 #------------------------------------------------------------------------------
 # MODE: attribute
@@ -194,7 +193,6 @@ r fs_toolset_call @[a-z][a-z]
 
 r fs_local [A-Z]
 r assign_fs_local \^[A-Z]
-#r assign_to_list  \^\{[A-Z,\{\}]*\}
 c assign_to_list assign_to_list
 r fs_global [a-z]
 r assign_fs_global \^[a-z]
@@ -207,15 +205,11 @@ r fs_llist_function_rt @[A-Z]\(
 r home_health_alias @@[^()]+\([^)]*\)
 
 r string ("[^"\n]*")
-#r queued_list `([^']|\n)*'
 c queued_list queued_list
 l stray_single_quote '
 r unmatched_queued_list `[^\n']*
 
 r integer \d+
-#r string \d[a-zA-Z0-9\.]+
-# non-numeric implicit literals must have at least one letter.
-#r string \d[a-zA-Z0-9\.]*[a-zA-Z\.]+[a-zA-Z0-9\.]*
 r string \d[a-zA-Z\d\.]*[a-zA-Z\.]+[a-zA-Z\d\.]*
 r float \d+\.\d+
 
@@ -224,6 +218,9 @@ r named_toolset @\.[a-zA-Z0-9]+\[[a-zA-Z0-9]+\]
 r identifier [A-Za-z][A-Za-z\d]+
 r assign_identifier \^[A-Za-z][A-Za-z\d]+
 r local_variable_definition [Vv][Aa][Rr]:\s[\sA-Za-z\d]*$
+
+r open_tag  <#\w+>
+l close_tag <#>
 
 #------------------------------------------------------------------------------
 # MODE: magic
@@ -247,4 +244,3 @@ l seperate_list |
 r list_member_item [^{|}\n]+
 r newline [ \t]*\n[ \t]*
 r terminate_list_member [ \t]*\n\n
-

@@ -1,7 +1,7 @@
-MTUNV|S60F=https://vcfs02.meditech.com/svn/M-AT/6.0/Source/PgmSource/
-MTUNV2|S6.0.6F=https://vcfs02.meditech.com/svn/M-AT/6.0.6/Source/PgmSource/
-MTUNV2|S6.0.7F=https://vcfs02.meditech.com/svn/M-AT/6.0.7/Source/PgmSource/
-MTUNV608|S6.0.8F=http://vcfs02.meditech.com/viewvc/M-AT/6.0.8/Source/PgmSource/
+MTUNV|S60F      = https://vcfs02.meditech.com/svn/M-AT/6.0/Source/PgmSource/
+MTUNV2|S6.0.6F  = https://vcfs02.meditech.com/svn/M-AT/6.0.6/Source/PgmSource/
+MTUNV2|S6.0.7F  = https://vcfs02.meditech.com/svn/M-AT/6.0.7/Source/PgmSource/
+MTUNV608|S6.0.8F= http://vcfs02.meditech.com/svn/M-AT/6.0.8/Source/PgmSource/
 
 MTUNV|S61F=https://vcfs02.meditech.com/svn/M-AT/6.1/Source/PgmSource/
 MTUNV2|S6.1.3F=https://vcfs02.meditech.com/svn/M-AT/6.1.3/Source/PgmSource/

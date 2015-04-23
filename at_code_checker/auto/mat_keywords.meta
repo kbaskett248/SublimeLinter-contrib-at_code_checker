@@ -99,6 +99,8 @@ Preamble|ExternalSet
 Preamble|Options
 Preamble|WebPopUp
 Preamble|Window
+Pretranslation|Substitution
+Pretranslation|NoSubstitution
 Report|Banner
 Report|ReportFrame
 Report|Detail
@@ -182,6 +184,7 @@ Translation|Source
 WebBodyHH|Body
 WebBodyHH|Component
 WebComponent|AccordionControl
+WebComponent|BillpayFrame
 WebComponent|BranchDown
 WebComponent|Calendar
 WebComponent|ChoicePopover
@@ -211,8 +214,6 @@ WebComponent|Image
 WebComponent|ImageAnnotate
 WebComponent|ImageSlider
 WebComponent|ImageSliderItem
-WebComponent|Index
-WebComponent|IndexColumn
 WebComponent|InputButton
 WebComponent|InputCheckBox
 WebComponent|InputCheckBoxGroup
@@ -223,12 +224,9 @@ WebComponent|InputRadio
 WebComponent|InputRichText
 WebComponent|InputText
 WebComponent|InputTextArea
-WebComponent|InputTextMulti
 WebComponent|InputToggle
 WebComponent|ListView
 WebComponent|ListViewColumn
-WebComponent|ListViewGridRow
-WebComponent|ListViewGridCell
 WebComponent|Lookup
 WebComponent|LKMethod
 WebComponent|LKColumn
@@ -263,6 +261,7 @@ WebComponent|SelectionGroup
 WebComponent|StaticTable
 WebComponent|STRow
 WebComponent|STCell
+WebComponent|TabControl
 WebComponent|Text
 WebComponent|TextGroup
 WebComponent|TextSegment
@@ -313,12 +312,15 @@ WebRoutine|ChildRoutine
 WebRoutine|Page
 WebRoutine|Program
 WebRoutine|Redirection
+WebRoutine|Product
 WebStyle|AlignStyle
 WebStyle|BorderStyle
 WebStyle|ContentStyle
 WebStyle|PaletteEntry
 WebStyle|RadioCheckInputStyle
 WebStyle|TextInputStyle
+WebStyle|SpriteSheet
+WebStyle|Sprite
 WebStyle|Arrangement
 WebStyleHH|AlignStyle
 WebStyleHH|BorderStyle
@@ -328,3 +330,4 @@ WebValidation|GlobalParameter
 WebValidation|Validator
 WebValidation|ExceptionOverride
 WebValidation|Parameter
+WebValidation|Product
