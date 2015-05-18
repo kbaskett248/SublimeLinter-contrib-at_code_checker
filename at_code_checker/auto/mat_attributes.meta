@@ -1239,7 +1239,6 @@ WebComponent|DatePicker|InitialMonth|Value
 WebComponent|DatePicker|LabelAlignStyle|Value
 WebComponent|DatePicker|LabelBorderStyle|Value
 WebComponent|DatePicker|LabelContentStyle|Value
-WebComponent|DatePicker|MonthSelectRange|Value
 WebComponent|DatePicker|MonthYearNavAlignStyle|Value
 WebComponent|DatePicker|MonthYearNavBorderStyle|Value
 WebComponent|DatePicker|MonthYearNavContentStyle|Value
@@ -1576,6 +1575,7 @@ WebComponent|InputTextArea|Value|Value
 WebComponent|InputTextArea|Width|Value
 WebComponent|InputText|AssistedEntry|Value
 WebComponent|InputText|AuthorizeNetField|Choice
+WebComponent|InputText|BarcodeOnly|Choice
 WebComponent|InputText|BlinkMode|Choice
 WebComponent|InputText|Choices|Value
 WebComponent|InputText|CybersourceField|Choice
@@ -1904,6 +1904,7 @@ WebComponent|RTDisplay|Width|Value
 WebComponent|RTElement|AlignStyle|Value
 WebComponent|RTElement|AllowDeselection|Keyword
 WebComponent|RTElement|AssistedEntry|Value
+WebComponent|RTElement|BarcodeOnly|Value
 WebComponent|RTElement|BorderStyle|Value
 WebComponent|RTElement|CellFlags|Value
 WebComponent|RTElement|ChangeCondition|Value
@@ -2180,6 +2181,7 @@ WebComponent|TabControl|Value|Value
 WebComponent|TabControl|Width|Value
 WebComponent|TextSegment|ContentStyle|Value
 WebComponent|TextSegment|ExternalLinkAlwaysUsePopup|Choice
+WebComponent|TextSegment|ExternalLinkStatic|Choice
 WebComponent|TextSegment|ExternalLinkWindowHeight|Integer
 WebComponent|TextSegment|ExternalLinkWindowWidth|Integer
 WebComponent|TextSegment|ExternalLink|Value
@@ -2470,12 +2472,12 @@ WebStyle|SpriteSheet|Source|Value
 WebStyle|SpriteSheet|SpriteHeight|Value
 WebStyle|SpriteSheet|SpriteWidth|Value
 WebStyle|SpriteSheet|VerticalGap|Value
-WebStyle|Sprite|col|Value
-WebStyle|Sprite|height|Value
-WebStyle|Sprite|left|Value
-WebStyle|Sprite|row|Value
-WebStyle|Sprite|top|Value
-WebStyle|Sprite|width|Value
+WebStyle|Sprite|Col|Value
+WebStyle|Sprite|Height|Value
+WebStyle|Sprite|Left|Value
+WebStyle|Sprite|Row|Value
+WebStyle|Sprite|Top|Value
+WebStyle|Sprite|Width|Value
 WebStyle|TextInputStyle|AlignStyle|String
 WebStyle|TextInputStyle|AltStyle|Choice
 WebStyle|TextInputStyle|BorderStyle|String

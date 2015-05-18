@@ -1,0 +1,10 @@
+# This file contains a list of M-AT functions that will not work at all in WPL.
+
+@CallWinHelp
+@QueryExternalApp
+@CaptureWindowBitmap
+@RenderWindowBitmap
+@GiveProcessFocusRaw
+@SetFocusExternalApp
+@LaunchExternalApp
+@TerminateExternalApp

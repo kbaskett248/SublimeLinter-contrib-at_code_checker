@@ -1,0 +1,10 @@
+# This file contains a list of M-AT attributes that will not work at all in WPL.
+
+AskCredentials
+SystemTrayIcon
+SystemTrayText
+NullProcessGroup
+HideOtherWindows
+Animation
+MaximizeExtraLargeWindow
+ProcessIcon

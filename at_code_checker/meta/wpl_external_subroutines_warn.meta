@@ -1,0 +1,23 @@
+# This file contains a list of external subroutines and procedures that will 
+# not work as expected in WPL.
+
+FocUtilities.GeneralFunctions.C,CreateFolder
+FocUtilities.OpenSslFunctions.C,GetClient
+FocX.IndexUtilities.C,Execute
+FocZ.Subversion.C
+FocZ.TextPad.Link.P
+FocZ.TextPad.Utilities.C
+FocZ.TextPad.WebUtilities.C,CallColorWebpage
+FocZ.TextPadTools.Guts.P
+MisSpecFmt.Mgmt.C
+MisUtilities.ClearFiles.C,CreateFile
+MisUtilities.ClearFiles.C,CreateTempFile
+MisUtilities.ClearFiles.C,DestroyFile
+MisUtilities.ClearFiles.C,GetFile
+MisUtilities.ClearFiles.C,OpenFileForWritingAppend
+MisUtilities.ClearFiles.C,OpenFileForWritingReplace
+MisUtilities.GeneralFunctions.C,CreateFolder 
+MisUtilities.GeneralFunctions.C,GetClient 
+MisUtilities.LinkExternal.P
+MisWgt.Links.C
+MisZ.EmailUtilityButton.P

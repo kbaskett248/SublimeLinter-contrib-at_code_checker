@@ -178,13 +178,11 @@ l functional_if @IF{
 l do DO{
 l functional_do @DO{
 
-l error ==
-
 r then [ ]
 
 # other non-operator token types
 
-r at_function @[A-Z][a-zA-Z]{2,}\([^\)]*\)
+r at_function @[A-Z][a-zA-Z]{2,}\([^\)\n]*\)
 c at_function SortRecords
 r error @SortRecords\(.*$
 r fs_function @[A-Z][a-zA-Z]

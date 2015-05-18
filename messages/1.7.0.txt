@@ -1,0 +1,9 @@
+Updating AT Code Checker to v2015.05.15 "Hera"
+
+	- New checks for functions that behave differently or not at all in WPL.
+ 	  This check is enabled by default.
+
+	- New check for M-AT functions called with too many translation-time arguments.
+	  This check is enabled by default.
+
+	- Assorted bug fixes and tweaks.

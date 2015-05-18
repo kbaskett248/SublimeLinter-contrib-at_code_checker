@@ -1,0 +1,6 @@
+# This file contains a list of M-AT functions that will not work as expected in WPL.
+@BarcodeIsSupported
+@BarcodeRead
+@EnumeratePrinters
+@GetClientName
+@ListAllProcesses

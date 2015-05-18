@@ -1,0 +1,31 @@
+# This file contains a list of FS functions that will not work at all in WPL.
+
+# Native FS Graph Functions
+# Use Graph.dll instead. Graph.dll is designed to work in WPL.
+@BG
+@CG
+@DG
+@LG
+@RG
+@SG
+@UG
+@VG
+
+# Get/Put Clipboard 
+@Gk
+@Pk
+
+# Tray and Taskbar functions
+# Disable this code in WPL mode.  In this case,  it won’t be a huge loss in functionality.
+@It
+@Iy
+@TZ 
+
+# Write Time
+@WT
+
+# Play Sound File
+@PZ
+
+# Write MCI String
+@WY
