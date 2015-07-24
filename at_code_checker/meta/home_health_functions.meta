@@ -5,11 +5,10 @@
 @CallDataDefSub
 @ClearObjectDirtyFlagsRT
 @ExitChildReturnData
-@GetObjectLongLockValue
 @GetObjectLongLockParams
 @GetObjectLongLockSystemInfo
 @GetObjectLongLockValue
-@GetObjectLongLockParams
+@GetProcessLongLockParams
 @GetProcessLongLockSystemInfo
 @GetProcessLongLockValue
 @LockLongMulti
