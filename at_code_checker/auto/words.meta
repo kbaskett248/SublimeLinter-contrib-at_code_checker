@@ -863,6 +863,7 @@ Atlanta
 Atlantan
 Atlantic
 Atlantis
+Atlassian
 Atlee
 Atman
 Atmore
@@ -2088,6 +2089,7 @@ CallStructuredExportTxn
 CallStructuredFlush
 CallStructuredImport
 CallStructuredImportAdditional
+CallStructuredImportMulti
 CallStructuredPurge
 CallStructuredSubmit
 CallSub
@@ -2099,6 +2101,7 @@ Callahan
 Callao
 Callas
 CallbackAfterClientUpdate
+CallbackAfterCurrentCycle
 Calmar
 Calmat
 Caloocan
@@ -4837,6 +4840,7 @@ GetBodyButtonState
 GetBodyGroupState
 GetBranchDownValue
 GetClientName
+GetControlState
 GetConversionCrawlerStatus
 GetConversionInfo
 GetConversionState
@@ -4925,6 +4929,7 @@ GetQueuedProcessMessage
 GetRecord
 GetRecordEffectiveOn
 GetRecordRT
+GetRefreshURL
 GetReportParam
 GetRoot
 GetSearchMode
@@ -11023,6 +11028,7 @@ RecordsFullyInMemory
 Redbridge
 Redding
 Redgrave
+RedirectToExternalURL
 RedirectToPopUpWebRoutine
 RedirectToWebRoutine
 RedisplayFullWindowTitle
@@ -11090,6 +11096,7 @@ ResetProgressiveConversion
 ResetReportFolio
 ResetScrollPosition
 ResetSubBodyButtons
+ResizeChildWebRoutine
 RestoreObjectSnapshot
 Restoril
 Reticulum
@@ -12711,6 +12718,7 @@ Terrill
 Tesla
 Tessa
 Test
+TestWebConnection
 Tet
 Teton
 Teuton
@@ -13920,6 +13928,7 @@ WebBreak
 WebClearSelectValues
 WebLogoff
 WebMeditorInsert
+WebOpenFileUploadDialog
 WebOpenPrintDialog
 WebPdfView
 WebPdfViewCleanup
@@ -18772,6 +18781,7 @@ aphorizing
 aphrodisiac
 aphrodisiacal
 aphrodisiacs
+api
 apian
 apiarian
 apiaries
@@ -37685,6 +37695,7 @@ deductions
 deductive
 deductively
 deducts
+deduplicate
 deed
 deeded
 deeding
@@ -41987,6 +41998,7 @@ downers
 downfall
 downfallen
 downfalls
+downflags
 downgrade
 downgraded
 downgrades
@@ -44467,6 +44479,7 @@ encoder
 encoders
 encodes
 encoding
+encodings
 encomia
 encomiastic
 encomium
@@ -63905,6 +63918,7 @@ jpg
 jq
 jr
 js
+json
 jt
 ju
 jubbah
@@ -97341,6 +97355,7 @@ shard
 shards
 share
 shareable
+sharebase
 sharecrop
 sharecropped
 sharecropper
@@ -101995,6 +102010,7 @@ squishing
 squishy
 sr
 src
+sro
 ss
 ssh
 st
@@ -103868,6 +103884,8 @@ sublimities
 sublimity
 subline
 sublingual
+sublist
+sublists
 sublittoral
 sublunar
 sublunary

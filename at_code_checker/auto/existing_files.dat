@@ -22,6 +22,7 @@ et.pyd
 existing_files.dat
 fs_functions.meta
 fs_functions_to_avoid.meta
+function_arguments.meta
 guration.exe
 home_health_attributes.meta
 home_health_functions.meta
@@ -58,4 +59,10 @@ t.pyd
 tokens.meta
 version.meta
 words.meta
+wpl_attributes_fail.meta
+wpl_external_subroutines_warn.meta
+wpl_fs_functions_fail.meta
+wpl_fs_functions_warn.meta
+wpl_mat_functions_fail.meta
+wpl_mat_functions_warn.meta
 yd

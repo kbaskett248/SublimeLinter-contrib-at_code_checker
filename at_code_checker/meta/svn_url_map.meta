@@ -1,7 +1,7 @@
 MTUNV|S60F      = https://vcfs02.meditech.com/svn/M-AT/6.0/Source/PgmSource/
 MTUNV2|S6.0.6F  = https://vcfs02.meditech.com/svn/M-AT/6.0.6/Source/PgmSource/
 MTUNV2|S6.0.7F  = https://vcfs02.meditech.com/svn/M-AT/6.0.7/Source/PgmSource/
-MTUNV608|S6.0.8F= http://vcfs02.meditech.com/svn/M-AT/6.0.8/Source/PgmSource/
+MTUNV608|S6.0.8F= https://vcfs02.meditech.com/svn/M-AT/6.0.8/Source/PgmSource/
 
 MTUNV|S61F=https://vcfs02.meditech.com/svn/M-AT/6.1/Source/PgmSource/
 MTUNV2|S6.1.3F=https://vcfs02.meditech.com/svn/M-AT/6.1.3/Source/PgmSource/
@@ -15,8 +15,11 @@ MTCM|MTCM.DEVF=https://vcfs02.meditech.com/svn/M-AT/MTCM.DEVF/Source/PgmSource/
 MTCM|INTS61F=https://vcfs02.meditech.com/svn/M-AT/INT/6.1/Source/PgmSource/
 
 # "2.0.x" rings:
-MTUNV20|S20F=http://vcfs02.meditech.com/svn/M-AT/2.0/Source/PgmSource/
-MTUNV201|S2.0.1F=http://vcfs02.meditech.com/svn/M-AT/2.0.1/Source/PgmSource/
+MTUNV20|S20F=https://vcfs02.meditech.com/svn/M-AT/2.0/Source/PgmSource/
+MTUNV201|S2.0.1F=https://vcfs02.meditech.com/svn/M-AT/2.0.1/Source/PgmSource/
+MTUNV201|D2.0.1F=https://vcfs02.meditech.com/svn/M-AT/2.0.1/Dev/PgmSource/
+MTUNV201|T2.0.1F=https://vcfs02.meditech.com/svn/M-AT/2.0.1/Test/PgmSource/
+MTUNV201|C2.0.1F=https://vcfs02.meditech.com/svn/M-AT/2.0.1/Complete/PgmSource/
 
 # Home Health Rings
 FIL|FILDEV=svn://boris/maestro/FocusRepos/branches/FILDEV/PgmSource/
@@ -24,3 +27,13 @@ PTCTDEV|DEV24=svn://boris/maestro/FocusRepos/branches/Version.2.4.x/DEV/PgmSourc
 PTCTDEV|DEV25=svn://boris/maestro/FocusRepos/branches/Version.2.5.x/DEV/PgmSource/
 PTCTDEV|DEV26=svn://boris/maestro/FocusRepos/branches/Version.2.6.x/DEV/PgmSource/
 PTCTDEV|DEV27=svn://boris/maestro/FocusRepos/branches/Version.2.7.x/DEV/PgmSource/
+
+# PLR 2.0.x rings
+MTUNV201|PLRD2.0.1F=http://focdev26.meditech.com/svn/ADE_MAT/2.0.1/Dev/PgmSource/
+MTUNV201|PLRS2.0.1F=http://focdev26.meditech.com/svn/ADE_MAT/2.0.1/Source/PgmSource/
+MTUNV201|PLRT2.0.1F=http://focdev26.meditech.com/svn/ADE_MAT/2.0.1/Test/PgmSource/
+MTUNV201|PLRC2.0.1F=http://focdev26.meditech.com/svn/ADE_MAT/2.0.1/Complete/PgmSource/
+
+MTUNV608|PLRD6.0.8F=http://focdev26.meditech.com/svn/ADE_MAT/6.0.8/Dev/PgmSource/
+MTUNV608|PLRT6.0.8F=http://focdev26.meditech.com/svn/ADE_MAT/6.0.8/Test/PgmSource/
+MTUNV608|PLRC6.0.8F=http://focdev26.meditech.com/svn/ADE_MAT/6.0.8/Complete/PgmSource/

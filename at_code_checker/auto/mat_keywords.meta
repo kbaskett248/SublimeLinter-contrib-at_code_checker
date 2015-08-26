@@ -210,6 +210,8 @@ WebComponent|GridPanel
 WebComponent|PanelItem
 WebComponent|HorizontalPanel
 WebComponent|PanelItem
+WebComponent|HorizontalSlider
+WebComponent|HorizontalSliderStyleType
 WebComponent|Image
 WebComponent|ImageAnnotate
 WebComponent|ImageSlider
@@ -313,6 +315,8 @@ WebRoutine|Page
 WebRoutine|Program
 WebRoutine|Redirection
 WebRoutine|Product
+WebRoutine|Program
+WebRoutine|Arrangement
 WebStyle|AlignStyle
 WebStyle|BorderStyle
 WebStyle|ContentStyle

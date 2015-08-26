@@ -120,6 +120,7 @@ l end_list }
 
 l start_apply [
 l start_stack_apply @[
+l non_protect_apply ~[
 l end_apply ]
 
 l subtract -
@@ -194,8 +195,8 @@ r assign_fs_local \^[A-Z]
 c assign_to_list assign_to_list
 r fs_global [a-z]
 r assign_fs_global \^[a-z]
-r fs_ulist_function @[A-Z]\d+
-r fs_llist_function @[a-z]\d+
+r fs_ulist_function @[A-Z][\d#]+
+r fs_llist_function @[a-z][\d#]+
 r fs_ulist_function_rt @[A-Z]\(
 r fs_llist_function_rt @[A-Z]\(
 
@@ -212,6 +213,10 @@ r string \d[a-zA-Z\d\.]*[a-zA-Z\.]+[a-zA-Z\d\.]*
 r float \d+\.\d+
 
 r named_toolset @\.[a-zA-Z0-9]+\[[a-zA-Z0-9]+\]
+r dot_bracket_call \@\.\[[a-zA-Z0-9]+,([a-zA-Z0-9]+|\.)\]
+l dot_evaluate @.(
+
+#
 
 r identifier [A-Za-z][A-Za-z\d]+
 r assign_identifier \^[A-Za-z][A-Za-z\d]+

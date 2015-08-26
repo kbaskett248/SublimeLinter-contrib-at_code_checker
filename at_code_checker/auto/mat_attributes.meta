@@ -735,6 +735,7 @@ ScreenComponent|Grid|CellOnAfterChange|Value
 ScreenComponent|Grid|CellOnChange|Value
 ScreenComponent|Grid|CellOnLookup|Value
 ScreenComponent|Grid|ColumnLoadCallback|Value
+ScreenComponent|Grid|EnableDragDrop|Yes/No
 ScreenComponent|Grid|FocXgridOID|Value
 ScreenComponent|Grid|GridOnClick|Value
 ScreenComponent|Grid|InitialColumnRID|Value
@@ -1262,7 +1263,7 @@ WebComponent|DownloadButton|Data|Value
 WebComponent|DownloadButton|File|Value
 WebComponent|DownloadButton|Label|Value
 WebComponent|DynamicTable|GrayBarStartColor|Choice
-WebComponent|DynamicTable|GrayBars|Yes/No
+WebComponent|DynamicTable|GrayBars|Yes/
 WebComponent|DynamicTable|HorizontalGridLines|Value
 WebComponent|DynamicTable|HorizontalLabelGridLines|Value
 WebComponent|DynamicTable|HoverHighlightBar|Value
@@ -1319,6 +1320,7 @@ WebComponent|ElementSet|NumRowsVisible|Value
 WebComponent|EmbeddedWebSite|Height|Value
 WebComponent|EmbeddedWebSite|Source|Value
 WebComponent|EmbeddedWebSite|Width|Value
+WebComponent|ExternalWebComponent|CodeBaseRT|String
 WebComponent|ExternalWebComponent|CodeBase|String
 WebComponent|ExternalWebComponent|ComponentName|Value
 WebComponent|ExternalWebComponent|Source|Value
@@ -1354,6 +1356,8 @@ WebComponent|FlowsheetCell|ContentStyle|Value
 WebComponent|FlowsheetCell|DirectText|Value
 WebComponent|FlowsheetCell|OnClick|Value
 WebComponent|FlowsheetCell|OnRightClick|Value
+WebComponent|FlowsheetCell|SuppressHorizontalGridLine|Value
+WebComponent|FlowsheetCell|SuppressVerticalGridLine|Value
 WebComponent|FlowsheetColumn|LabelAlignStyle|Value
 WebComponent|FlowsheetColumn|LabelBorderStyle|Value
 WebComponent|FlowsheetColumn|LabelClickable|Value
@@ -1367,6 +1371,7 @@ WebComponent|FlowsheetColumn|LabelContentStyle|Value
 WebComponent|FlowsheetColumn|LabelDirectText|Value
 WebComponent|FlowsheetColumn|LabelOnClick|Value
 WebComponent|FlowsheetColumn|LabelOnRightClick|Value
+WebComponent|FlowsheetColumn|SuppressVerticalGridLine|Value
 WebComponent|FlowsheetColumn|Width|Value
 WebComponent|FlowsheetPivot|AlignStyle|Value
 WebComponent|FlowsheetPivot|BorderStyle|Value
@@ -1395,6 +1400,7 @@ WebComponent|FlowsheetRow|LabelContentStyle|Value
 WebComponent|FlowsheetRow|LabelDirectText|Value
 WebComponent|FlowsheetRow|LabelOnClick|Value
 WebComponent|FlowsheetRow|LabelOnRightClick|Value
+WebComponent|FlowsheetRow|SuppressHorizontalGridLine|Value
 WebComponent|Flowsheet|ColumnLabelHeight|Value
 WebComponent|Flowsheet|ColumnValue|Value
 WebComponent|Flowsheet|Height|Value
@@ -1409,6 +1415,7 @@ WebComponent|Flow|ChoicePopoverOnChange|Value
 WebComponent|Flow|Items|Value
 WebComponent|Flow|OnClick|Value
 WebComponent|Flow|OnRightClick|Value
+WebComponent|Flow|Wrap|Choice
 WebComponent|GridPanel|AlwaysShowScrollbars|Yes/No
 WebComponent|GridPanel|BorderStyle|Value
 WebComponent|GridPanel|Clickable|Value
@@ -1448,9 +1455,27 @@ WebComponent|HorizontalPanel|Scroll|Choice
 WebComponent|HorizontalPanel|TriggerContentRefresh|Value
 WebComponent|HorizontalPanel|Value|Value
 WebComponent|HorizontalPanel|Width|Value
+WebComponent|HorizontalSliderStyleType|AlignStyle|Value
+WebComponent|HorizontalSliderStyleType|BorderStyle|Value
+WebComponent|HorizontalSliderStyleType|ContentStyle|Value
+WebComponent|HorizontalSlider|ArrowNextDisabled|Value
+WebComponent|HorizontalSlider|ArrowNext|Value
+WebComponent|HorizontalSlider|ArrowPadding|Value
+WebComponent|HorizontalSlider|ArrowPrevDisabled|Value
+WebComponent|HorizontalSlider|ArrowPrev|Value
+WebComponent|HorizontalSlider|ArrowSpacer|Value
+WebComponent|HorizontalSlider|ArrowWidth|Value
+WebComponent|HorizontalSlider|ItemComponentRT|Value
+WebComponent|HorizontalSlider|ItemScrollTo|Value
+WebComponent|HorizontalSlider|ItemStyleType|Value
+WebComponent|HorizontalSlider|Items|Value
+WebComponent|HorizontalSlider|OnClick|Value
+WebComponent|HorizontalSlider|OnRightClick|Value
 WebComponent|ImageAnnotate|DisableNumbering|Value
 WebComponent|ImageAnnotate|Height|Value
 WebComponent|ImageAnnotate|OnAnnotate|Value
+WebComponent|ImageAnnotate|ToolbarPaletteCallback|Value
+WebComponent|ImageAnnotate|Toolbar|Value
 WebComponent|ImageAnnotate|Value|Value
 WebComponent|ImageAnnotate|Width|Value
 WebComponent|ImageSliderItem|BorderStyle|Value
@@ -1575,7 +1600,7 @@ WebComponent|InputTextArea|Value|Value
 WebComponent|InputTextArea|Width|Value
 WebComponent|InputText|AssistedEntry|Value
 WebComponent|InputText|AuthorizeNetField|Choice
-WebComponent|InputText|BarcodeOnly|Choice
+WebComponent|InputText|BarcodeOnly|Yes/
 WebComponent|InputText|BlinkMode|Choice
 WebComponent|InputText|Choices|Value
 WebComponent|InputText|CybersourceField|Choice
@@ -1587,9 +1612,9 @@ WebComponent|InputText|OnChange|Value
 WebComponent|InputText|OnKeypressMinMatchChars|Value
 WebComponent|InputText|OnKeypress|Value
 WebComponent|InputText|OverrideGrayText|Value
-WebComponent|InputText|Password|Yes/No
+WebComponent|InputText|Password|Yes/
 WebComponent|InputText|RID|Value
-WebComponent|InputText|SpellCheck|Yes/No
+WebComponent|InputText|SpellCheck|Yes/
 WebComponent|InputText|TextAlignStyle|Value
 WebComponent|InputText|TextInputStyle|Value
 WebComponent|InputText|TypeAheadLookup|Value
@@ -1770,6 +1795,7 @@ WebComponent|Meditor|Height|Value
 WebComponent|Meditor|Method|Choice
 WebComponent|Meditor|ModeUndoRedo|Value
 WebComponent|Meditor|ModeViewEdit|Value
+WebComponent|Meditor|OnAutoSave|Value
 WebComponent|Meditor|OnChange|Value
 WebComponent|Meditor|OnInitialRender|Value
 WebComponent|Meditor|OnRender|Value
@@ -1830,6 +1856,7 @@ WebComponent|PDFFile|AltText|Value
 WebComponent|PDFFile|AppId|Value
 WebComponent|PDFFile|Data|Value
 WebComponent|PDFFile|Height|Value
+WebComponent|PDFFile|ToolbarOptions|Value
 WebComponent|PDFFile|UseJavascriptViewer|Yes/No
 WebComponent|PDFFile|Width|Value
 WebComponent|PanelItem|AlignStyle|Value
@@ -1862,6 +1889,7 @@ WebComponent|PanelItem|SuppressFromPrint|Choice
 WebComponent|PanelItem|ValidationFailureExempt|Choice
 WebComponent|PanelItem|Value|Value
 WebComponent|PanelItem|Width|Value
+WebComponent|PanelItem|Wrap|Keyword
 WebComponent|PanelItem|ZoomArgs|Value
 WebComponent|PanelItem|Zoom|Keyword
 WebComponent|RTBlank|BorderStyle|Value
@@ -2075,7 +2103,6 @@ WebComponent|STCell|ContainerBorderStyle|Value
 WebComponent|STCell|ContainerContentStyle|Value
 WebComponent|STCell|ContentStyle|Value
 WebComponent|STCell|DirectText|Value
-WebComponent|STCell|InputId|Value
 WebComponent|STCell|OnClick|Value
 WebComponent|STCell|OnRightClick|Value
 WebComponent|STCell|RowSpan|Value
@@ -2096,6 +2123,7 @@ WebComponent|SchedulingGrid|ResourceLabelDirectText|Value
 WebComponent|SchedulingGrid|SchedulingGridOID|Value
 WebComponent|SchedulingGrid|ShowCurrentTimeIndicator|Choice
 WebComponent|SchedulingGrid|TimeLabelContentStyle|Value
+WebComponent|SchedulingGrid|TimeLabel|Value
 WebComponent|SecondFactorAuthInput|Height|Value
 WebComponent|SecondFactorAuthInput|Width|Value
 WebComponent|SelectColumn|Images|Value
@@ -2174,11 +2202,13 @@ WebComponent|TabControl|TabDisabled|Value
 WebComponent|TabControl|TabHeader|Value
 WebComponent|TabControl|TabImage|Value
 WebComponent|TabControl|TabLabel|Value
+WebComponent|TabControl|TabWidthBasis|Choice
 WebComponent|TabControl|TriggerContentRefresh|Value
 WebComponent|TabControl|UnselectedTabBorderStyle|Value
 WebComponent|TabControl|UnselectedTabContentStyle|Value
 WebComponent|TabControl|Value|Value
 WebComponent|TabControl|Width|Value
+WebComponent|TextGroup|Wrap|Keyword
 WebComponent|TextSegment|ContentStyle|Value
 WebComponent|TextSegment|ExternalLinkAlwaysUsePopup|Choice
 WebComponent|TextSegment|ExternalLinkStatic|Choice
@@ -2329,6 +2359,7 @@ WebRegion|Component|ShowForAccordionState|Choice
 WebRegion|Component|Spacer|Decimal
 WebRegion|Component|Type|Type
 WebRegion|Component|Value|Value
+WebRegion|Component|Wrap|Choice
 WebRegion|ExternalWebRegion|CodeBase|String
 WebRegion|ExternalWebRegion|RegionName|String
 WebRegion|ExternalWebRegion|RegionRT|Value
@@ -2385,6 +2416,7 @@ WebRoutine|Page|OnCybersourceResponse|Value
 WebRoutine|Page|OnEntry|Value
 WebRoutine|Page|OnExit|Value
 WebRoutine|Page|OnProcessMessage|Value
+WebRoutine|Page|OnToolsetMessage|Value
 WebRoutine|Page|Panel|String
 WebRoutine|Page|Region|String
 WebRoutine|Program|Arrangement|String
@@ -2403,6 +2435,7 @@ WebRoutine|Program|OnMasterEntry|Value
 WebRoutine|Program|OnMasterExit|Value
 WebRoutine|Program|OnOrientationChange|Value
 WebRoutine|Program|OnProcessMessage|Value
+WebRoutine|Program|OnToolsetMessage|Value
 WebRoutine|Program|OnTwoFingerSwipe|Value
 WebRoutine|Program|OnWebPdfViewerMessage|Value
 WebRoutine|Program|OnWebSessionBarExit|Value
@@ -2452,6 +2485,7 @@ WebStyle|ContentStyle|FgColor|Color
 WebStyle|ContentStyle|FontFamily|Choice
 WebStyle|ContentStyle|FontSize|Choice
 WebStyle|ContentStyle|FontStyle|Choice
+WebStyle|ContentStyle|FontWeight|Choice
 WebStyle|ContentStyle|Italic|YesNo
 WebStyle|ContentStyle|StrikeThrough|YesNo
 WebStyle|ContentStyle|TextShadow|String

@@ -65,6 +65,7 @@
 @CallStructuredFlush
 @CallStructuredImport
 @CallStructuredImportAdditional
+@CallStructuredImportMulti
 @CallStructuredPurge
 @CallStructuredSubmit
 @CallSub
@@ -72,6 +73,7 @@
 @CallTool
 @CallWinHelp
 @CallbackAfterClientUpdate
+@CallbackAfterCurrentCycle
 @CanCallChildScreen
 @CaptureIndexNoOpsTxn
 @CaptureWindowBitmap
@@ -252,6 +254,7 @@
 @GetBodyGroupState
 @GetBranchDownValue
 @GetClientName
+@GetControlState
 @GetConversionCrawlerStatus
 @GetConversionInfo
 @GetConversionState
@@ -340,6 +343,7 @@
 @GetRecord
 @GetRecordEffectiveOn
 @GetRecordRT
+@GetRefreshURL
 @GetReportParam
 @GetRoot
 @GetSearchMode
@@ -598,6 +602,7 @@
 @RecordTag
 @RecordsChanged
 @RecordsFullyInMemory
+@RedirectToExternalURL
 @RedirectToPopUpWebRoutine
 @RedirectToWebRoutine
 @RedisplayFullWindowTitle
@@ -633,6 +638,7 @@
 @ResetReportFolio
 @ResetScrollPosition
 @ResetSubBodyButtons
+@ResizeChildWebRoutine
 @RestoreObjectSnapshot
 @RetrieveDistributedProcessingIncompleteLog
 @RetrieveExternalFile
@@ -727,6 +733,7 @@
 @SubBodyButtonSelected
 @TerminateExternalApp
 @TerminateReport
+@TestWebConnection
 @TextAppend
 @TextAppendEnd
 @TextAppendTop
@@ -804,6 +811,7 @@
 @WebClearSelectValues
 @WebLogoff
 @WebMeditorInsert
+@WebOpenFileUploadDialog
 @WebOpenPrintDialog
 @WebPdfView
 @WebPdfViewCleanup

@@ -1,0 +1,7 @@
+Updating AT Code Checker to v2015.08.24 "Hera"
+
+	- Corrects an issue in which the Configuration utility fails to start if the configuration directory did not already exist, like on a fresh install.
+
+	- Adds new functions, keywords and arguments.
+
+	- Adds support for new FS syntax.
