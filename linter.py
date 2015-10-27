@@ -10,6 +10,7 @@
 
 """This module exports the At_code_checker plugin class."""
 import errno
+import logging
 import os
 import platform
 import re
@@ -22,6 +23,8 @@ import sublime_plugin
 
 from SublimeLinter.lint import Linter, util
 
+logger = logging.getLogger(__name__)
+
 ring_matcher = re.compile(
     r"((.*?\\([^:\\\/\n]+?)\.Universe)\\([^:\\\/\n]+?)\.Ring)(?![^\\])",
     re.IGNORECASE)
@@ -33,11 +36,11 @@ def get_linter_path():
                         'at_code_checker')
 
 
-def create_dir(dir):
+def create_dir(dir_):
     """Make the directory if it doesn't exist. If it does, just eat exception."""
-    print("Creating dir " + dir)
     try:
-        os.makedirs(dir)
+        os.makedirs(dir_)
+        logger.debug("Creating directory %s", dir_)
     except OSError as e:
         if e.errno != errno.EEXIST:
             raise
@@ -134,8 +137,6 @@ class At_code_checker(Linter):
 
         suffix = suffix or self.get_tempfile_suffix()
 
-        # print('temp_dir = %s' % self.tmpdir())
-
         try:
             with tempfile.NamedTemporaryFile(suffix=suffix,
                                              delete=False,
@@ -146,8 +147,7 @@ class At_code_checker(Linter):
                 f.write(code)
                 f.flush()
 
-            print('temp_file = ', f.name)
-
+            logger.debug("'temp_file=%s", f.name)
             cmd = list(cmd)
 
             if '@' in cmd:
