@@ -1339,6 +1339,7 @@ WebComponent|FlowPanel|MinHeight|Value
 WebComponent|FlowPanel|MinWidth|Value
 WebComponent|FlowPanel|OnClick|Value
 WebComponent|FlowPanel|OnRightClick|Value
+WebComponent|FlowPanel|PrintArea|Value
 WebComponent|FlowPanel|Scroll|Choice
 WebComponent|FlowPanel|TriggerContentRefresh|Value
 WebComponent|FlowPanel|Value|Value
@@ -1430,6 +1431,7 @@ WebComponent|GridPanel|MinWidth|Value
 WebComponent|GridPanel|NumCols|Value
 WebComponent|GridPanel|OnClick|Value
 WebComponent|GridPanel|OnRightClick|Value
+WebComponent|GridPanel|PrintArea|Value
 WebComponent|GridPanel|Scroll|Choice
 WebComponent|GridPanel|TriggerContentRefresh|Value
 WebComponent|GridPanel|Value|Value
@@ -1451,6 +1453,7 @@ WebComponent|HorizontalPanel|MinHeight|Value
 WebComponent|HorizontalPanel|MinWidth|Value
 WebComponent|HorizontalPanel|OnClick|Value
 WebComponent|HorizontalPanel|OnRightClick|Value
+WebComponent|HorizontalPanel|PrintArea|Value
 WebComponent|HorizontalPanel|Scroll|Choice
 WebComponent|HorizontalPanel|TriggerContentRefresh|Value
 WebComponent|HorizontalPanel|Value|Value
@@ -1572,6 +1575,9 @@ WebComponent|InputDropdown|OverrideGrayText|Value
 WebComponent|InputDropdown|RID|Value
 WebComponent|InputDropdown|Value|Value
 WebComponent|InputDropdown|Width|Value
+WebComponent|InputFileUpload|AcceptMimeTypes|Value
+WebComponent|InputFileUpload|OnFileUpload|Value
+WebComponent|InputFileUpload|UploadButtonLabel|Value
 WebComponent|InputRadio|AllowDeselection|Keyword
 WebComponent|InputRadio|Arrange|Choice
 WebComponent|InputRadio|ChoiceBorderStyle|Value
@@ -1601,12 +1607,14 @@ WebComponent|InputTextArea|Width|Value
 WebComponent|InputText|AssistedEntry|Value
 WebComponent|InputText|AuthorizeNetField|Choice
 WebComponent|InputText|BarcodeOnly|Yes/
+WebComponent|InputText|BarcodeScanNoAdvance|Yes/
 WebComponent|InputText|BlinkMode|Choice
 WebComponent|InputText|Choices|Value
 WebComponent|InputText|CybersourceField|Choice
 WebComponent|InputText|DataType|Value
 WebComponent|InputText|Disabled|Value
 WebComponent|InputText|ElementName|Object
+WebComponent|InputText|InputMethod|Choice
 WebComponent|InputText|Length|Value
 WebComponent|InputText|OnChange|Value
 WebComponent|InputText|OnKeypressMinMatchChars|Value
@@ -1751,6 +1759,7 @@ WebComponent|MatrixPanel|MinHeight|Value
 WebComponent|MatrixPanel|MinWidth|Value
 WebComponent|MatrixPanel|OnClick|Value
 WebComponent|MatrixPanel|OnRightClick|Value
+WebComponent|MatrixPanel|PrintArea|Value
 WebComponent|MatrixPanel|RowIterateOn|Value
 WebComponent|MatrixPanel|Scroll|Choice
 WebComponent|MatrixPanel|TriggerContentRefresh|Value
@@ -1804,6 +1813,7 @@ WebComponent|Meditor|ToolbarAppButtonAltText|Value
 WebComponent|Meditor|ToolbarAppButtonCallback|Value
 WebComponent|Meditor|ToolbarAppButtonToolTip|Value
 WebComponent|Meditor|ToolbarContentStyle|Value
+WebComponent|Meditor|ToolbarSuppressTableButton|Value
 WebComponent|Meditor|Toolbar|Choice
 WebComponent|Meditor|Value|Value
 WebComponent|MenuBlank|ShowCondition|Value
@@ -1824,6 +1834,8 @@ WebComponent|MenuItem|ImageScalable|Value
 WebComponent|MenuItem|ImageSelected|Value
 WebComponent|MenuItem|ImageWidth|Value
 WebComponent|MenuItem|Image|Value
+WebComponent|MenuItem|LineTwoContentStyle|Value
+WebComponent|MenuItem|LineTwoText|Value
 WebComponent|MenuItem|OnClick|Value
 WebComponent|MenuItem|OnRightClick|Value
 WebComponent|MenuItem|SelectedContentStyle|Value
@@ -1837,6 +1849,8 @@ WebComponent|Menu|DisabledContentStyle|Value
 WebComponent|Menu|HoverBorderStyle|Value
 WebComponent|Menu|HoverContentStyle|Value
 WebComponent|Menu|InitialItem|Value
+WebComponent|Menu|ItemHeight|Value
+WebComponent|Menu|ItemWidth|Value
 WebComponent|Menu|SelectedContentStyle|Value
 WebComponent|Menu|Spacing|Value
 WebComponent|NumberPad|ContentParams|Value
@@ -1933,6 +1947,7 @@ WebComponent|RTElement|AlignStyle|Value
 WebComponent|RTElement|AllowDeselection|Keyword
 WebComponent|RTElement|AssistedEntry|Value
 WebComponent|RTElement|BarcodeOnly|Value
+WebComponent|RTElement|BarcodeScanNoAdvance|Value
 WebComponent|RTElement|BorderStyle|Value
 WebComponent|RTElement|CellFlags|Value
 WebComponent|RTElement|ChangeCondition|Value
@@ -2043,6 +2058,9 @@ WebComponent|RepeatingPanel|BorderStyle|Value
 WebComponent|RepeatingPanel|Clickable|Value
 WebComponent|RepeatingPanel|ContentStyle|Value
 WebComponent|RepeatingPanel|Direction|Choice
+WebComponent|RepeatingPanel|HeaderName|String
+WebComponent|RepeatingPanel|HeaderRT|Value
+WebComponent|RepeatingPanel|HeaderType|Choice
 WebComponent|RepeatingPanel|Height|Value
 WebComponent|RepeatingPanel|IterateOn|Value
 WebComponent|RepeatingPanel|LeftMargin|Value
@@ -2053,6 +2071,7 @@ WebComponent|RepeatingPanel|MinWidth|Value
 WebComponent|RepeatingPanel|OnClick|Value
 WebComponent|RepeatingPanel|OnRequestAdditional|Value
 WebComponent|RepeatingPanel|OnRightClick|Value
+WebComponent|RepeatingPanel|PrintArea|Value
 WebComponent|RepeatingPanel|RequestAdditionalPagesLeft|Value
 WebComponent|RepeatingPanel|Scroll|Choice
 WebComponent|RepeatingPanel|SuppressIterationItem|Value
@@ -2108,8 +2127,6 @@ WebComponent|STCell|OnRightClick|Value
 WebComponent|STCell|RowSpan|Value
 WebComponent|STCell|Value|Value
 WebComponent|STCell|Width|Value
-WebComponent|SchedulingGrid|EnableDragDrop|Value
-WebComponent|SchedulingGrid|EnableStretch|Value
 WebComponent|SchedulingGrid|EventComponentName|String
 WebComponent|SchedulingGrid|EventComponentRT|Value
 WebComponent|SchedulingGrid|EventComponentType|Choice
@@ -2450,6 +2467,7 @@ WebRoutine|Program|TextInputStyle|String
 WebRoutine|Program|TimedEventInterval|Value
 WebRoutine|Program|TimedEvent|Value
 WebRoutine|Program|Title|Value
+WebRoutine|Program|TooltipStyle|String
 WebRoutine|Program|WebSessionAltTitle|Value
 WebRoutine|Program|WebSessionMenuGroup|Value
 WebRoutine|Program|WebSessionSignonInfo|Value
@@ -2524,6 +2542,9 @@ WebStyle|TextInputStyle|FocusedContentStyle|String
 WebStyle|TextInputStyle|FocusedTextAlignStyle|String
 WebStyle|TextInputStyle|Icon|Value
 WebStyle|TextInputStyle|TextAlignStyle|String
+WebStyle|TooltipStyle|AlignStyle|String
+WebStyle|TooltipStyle|BorderStyle|String
+WebStyle|TooltipStyle|ContentStyle|String
 WebValidation|ExceptionOverride|Code|Choice
 WebValidation|ExceptionOverride|Template|Value
 WebValidation|ExceptionOverride|Type|Choice

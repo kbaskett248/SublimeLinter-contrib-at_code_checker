@@ -17,7 +17,7 @@ MTCM|INTS61F=https://vcfs02.meditech.com/svn/M-AT/INT/6.1/Source/PgmSource/
 # "2.0.x" rings:
 MTUNV20|S20F=https://vcfs02.meditech.com/svn/M-AT/2.0/Source/PgmSource/
 MTUNV201|S2.0.1F=https://vcfs02.meditech.com/svn/M-AT/2.0.1/Source/PgmSource/
-MTUNV201|D2.0.1F=https://vcfs02.meditech.com/svn/M-AT/2.0.1/Dev/PgmSource/
+MTUNV201|D2.01F=https://vcfs02.meditech.com/svn/M-AT/2.0.1/Dev/PgmSource/
 MTUNV201|T2.0.1F=https://vcfs02.meditech.com/svn/M-AT/2.0.1/Test/PgmSource/
 MTUNV201|C2.0.1F=https://vcfs02.meditech.com/svn/M-AT/2.0.1/Complete/PgmSource/
 

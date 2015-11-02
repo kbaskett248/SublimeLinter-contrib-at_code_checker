@@ -222,6 +222,7 @@ WebComponent|InputCheckBoxGroup
 WebComponent|InputCheckBoxItem
 WebComponent|InputDropdown
 WebComponent|InputDropdownPopover
+WebComponent|InputFileUpload
 WebComponent|InputRadio
 WebComponent|InputRichText
 WebComponent|InputText
@@ -323,6 +324,7 @@ WebStyle|ContentStyle
 WebStyle|PaletteEntry
 WebStyle|RadioCheckInputStyle
 WebStyle|TextInputStyle
+WebStyle|TooltipStyle
 WebStyle|SpriteSheet
 WebStyle|Sprite
 WebStyle|Arrangement

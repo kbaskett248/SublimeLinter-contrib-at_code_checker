@@ -13,6 +13,8 @@ _svn.dll
 b.pyd
 de_checker.bat
 de_checker.exe
+de_checker32.bat
+de_checker64.bat
 dedata.pyd
 di_.pyd
 dlls_to_exclude.meta
