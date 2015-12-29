@@ -185,6 +185,7 @@
 @DeleteSynchList
 @DisableGoverningMutex
 @DisableGoverningMutexRT
+@DisableReportFolio
 @DisableServerCurrentRecordCaching
 @DisassembleRawRecord
 @DiscardConversionCrawler
@@ -592,6 +593,7 @@
 @QueryPrinterConfig
 @QueryProcess
 @QueryProcessRaw
+@QueryReportPrinterConfig
 @QueueProcessMessage
 @RID
 @ReadKey

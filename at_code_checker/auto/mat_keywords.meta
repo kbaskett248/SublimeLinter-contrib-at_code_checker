@@ -265,6 +265,7 @@ WebComponent|StaticTable
 WebComponent|STRow
 WebComponent|STCell
 WebComponent|TabControl
+WebComponent|Tab
 WebComponent|Text
 WebComponent|TextGroup
 WebComponent|TextSegment

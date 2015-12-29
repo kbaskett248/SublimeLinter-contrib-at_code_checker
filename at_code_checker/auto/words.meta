@@ -9,6 +9,7 @@ AMA
 AMS
 AN
 ANP
+ANPServer
 ANSI
 AO
 AOL
@@ -1665,6 +1666,7 @@ CV
 CVS
 CW
 CX
+CY
 CZ
 Ca
 Cabbala
@@ -2930,6 +2932,7 @@ Dionysos
 Dionysus
 DisableGoverningMutex
 DisableGoverningMutexRT
+DisableReportFolio
 DisableServerCurrentRecordCaching
 DisassembleRawRecord
 DiscardConversionCrawler
@@ -8680,6 +8683,7 @@ QueryFiles
 QueryPrinterConfig
 QueryProcess
 QueryProcessRaw
+QueryReportPrinterConfig
 Quetzalcoatl
 QueueProcessMessage
 Quilmes
@@ -47179,6 +47183,7 @@ fry
 fryer
 fryers
 frying
+fs
 ft
 fuchsia
 fuchsias
@@ -98090,6 +98095,7 @@ subsurface
 subsurfaces
 subsystem
 subsystems
+subtask
 subtasks
 subteen
 subteens

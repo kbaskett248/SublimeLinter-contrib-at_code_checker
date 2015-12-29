@@ -5,6 +5,7 @@
 48.dll
 CheckerFetch.mps
 CheckerLocalization.mps
+CodeChecker.ico
 I18N_attributes.meta
 I18N_rings.meta
 MT16X16.ICO
@@ -57,6 +58,7 @@ rutil-1.dll
 ry.zip
 sl.dll
 svn_url_map.meta
+system_variables.meta
 t.pyd
 tokens.meta
 version.meta
