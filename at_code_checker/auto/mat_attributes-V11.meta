@@ -1598,10 +1598,12 @@ WebComponent|InputRadio|Width|Value
 WebComponent|InputRichText|ElementName|Object
 WebComponent|InputRichText|RID|Value
 WebComponent|InputRichText|Value|Value
+WebComponent|InputTextArea|CaretOnFocus|Choice
 WebComponent|InputTextArea|Disabled|Value
 WebComponent|InputTextArea|ElementName|Object
 WebComponent|InputTextArea|Length|Value
 WebComponent|InputTextArea|OnChange|Value
+WebComponent|InputTextArea|OverrideGrayText|Value
 WebComponent|InputTextArea|RID|Value
 WebComponent|InputTextArea|Rows|Value
 WebComponent|InputTextArea|SpellCheck|Yes/No
@@ -1613,6 +1615,7 @@ WebComponent|InputText|AuthorizeNetField|Choice
 WebComponent|InputText|BarcodeOnly|Yes/
 WebComponent|InputText|BarcodeScanNoAdvance|Yes/
 WebComponent|InputText|BlinkMode|Choice
+WebComponent|InputText|CaretOnFocus|Choice
 WebComponent|InputText|Choices|Value
 WebComponent|InputText|CybersourceField|Choice
 WebComponent|InputText|DataType|Value
@@ -1803,6 +1806,7 @@ WebComponent|Matrix|RowValue|Value
 WebComponent|Matrix|VerticalGridLines|Value
 WebComponent|Matrix|VerticalLabelGridLines|Value
 WebComponent|Matrix|Width|Value
+WebComponent|Meditor|Compact|Choice
 WebComponent|Meditor|ElementName|Object
 WebComponent|Meditor|Height|Value
 WebComponent|Meditor|Method|Choice
@@ -1823,6 +1827,7 @@ WebComponent|Meditor|Value|Value
 WebComponent|MenuBlank|ShowCondition|Value
 WebComponent|MenuBlank|Width|Value
 WebComponent|MenuItem|AlignStyle|Value
+WebComponent|MenuItem|AuthorizeNetSubmit|Keyword
 WebComponent|MenuItem|BorderStyle|Value
 WebComponent|MenuItem|Bounce|Keyword
 WebComponent|MenuItem|ContentStyle|Value
@@ -1953,6 +1958,7 @@ WebComponent|RTElement|AssistedEntry|Value
 WebComponent|RTElement|BarcodeOnly|Value
 WebComponent|RTElement|BarcodeScanNoAdvance|Value
 WebComponent|RTElement|BorderStyle|Value
+WebComponent|RTElement|CaretOnFocus|Choice
 WebComponent|RTElement|CellFlags|Value
 WebComponent|RTElement|ChangeCondition|Value
 WebComponent|RTElement|Choices|Value
@@ -2075,6 +2081,7 @@ WebComponent|RepeatingPanel|MinWidth|Value
 WebComponent|RepeatingPanel|OnClick|Value
 WebComponent|RepeatingPanel|OnRequestAdditional|Value
 WebComponent|RepeatingPanel|OnRightClick|Value
+WebComponent|RepeatingPanel|PinnedHeaderLevel|Value
 WebComponent|RepeatingPanel|PrintArea|Value
 WebComponent|RepeatingPanel|RequestAdditionalPagesLeft|Value
 WebComponent|RepeatingPanel|Scroll|Choice
@@ -2157,6 +2164,7 @@ WebComponent|SelectColumn|ValueAlignStyle|Value
 WebComponent|SelectColumn|ValueContentStyle|Value
 WebComponent|SelectColumn|Value|Value
 WebComponent|SelectColumn|Width|Value
+WebComponent|SelectionGroup|Columns|Value
 WebComponent|SelectionGroup|EventCallback|Value
 WebComponent|SelectionGroup|FocusSelectedBorderStyle|Value
 WebComponent|SelectionGroup|FocusSelectedContentStyle|Value
@@ -2282,6 +2290,7 @@ WebComponent|TypeAheadLookup|EnableLeadingMatchFiltering|Yes/No
 WebComponent|TypeAheadLookup|HighlightedItemContentStyle|Value
 WebComponent|TypeAheadLookup|MatchLogic|Value
 WebComponent|TypeAheadLookup|MaxRows|Value
+WebComponent|TypeAheadLookup|MinMatchCharsLookupIcon|Yes/No
 WebComponent|TypeAheadLookup|MinMatchChars|Value
 WebComponent|TypeAheadLookup|ResultsBorderStyle|Value
 WebComponent|TypeAheadLookup|ResultsContentStyle|Value
@@ -2430,6 +2439,7 @@ WebRoutine|ChildRoutine|OnTypeAheadSeedChange|Value
 WebRoutine|ChildRoutine|OutsideClickReturnValue|Value
 WebRoutine|ChildRoutine|PassOutsideClickToParent|Value
 WebRoutine|ChildRoutine|Size|Value
+WebRoutine|ChildRoutine|SuppressFocusOnLaunch|Value
 WebRoutine|Page|Arrangement|String
 WebRoutine|Page|AuthorizeNetChargeData|Value
 WebRoutine|Page|CybersourceChargeData|Value
@@ -2444,10 +2454,13 @@ WebRoutine|Page|Region|String
 WebRoutine|Program|Arrangement|String
 WebRoutine|Program|CheckboxInputStyle|Value
 WebRoutine|Program|ClientTimerInterval|Value
+WebRoutine|Program|ClientTimerUserActivity|Keyword
 WebRoutine|Program|ConstrainImages|Keyword
 WebRoutine|Program|ExternalMarginContentStyle|Value
 WebRoutine|Program|HandheldZoom|Keyword
 WebRoutine|Program|HtmlDocType|Keyword
+WebRoutine|Program|InactivityTimerInterval|Value
+WebRoutine|Program|InactivityTimer|Value
 WebRoutine|Program|MaxWidth|Number
 WebRoutine|Program|MinWidth|Number
 WebRoutine|Program|OnClientTimer|Value

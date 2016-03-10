@@ -1,40 +1,53 @@
+# Source rings
+MTUNV20|S20F=https://vcfs02.meditech.com/svn/M-AT/2.0/Source/PgmSource/
+MTUNV201|S2.0.1F=https://vcfs02.meditech.com/svn/M-AT/2.0.1/Source/PgmSource/
 MTUNV|S60F      = https://vcfs02.meditech.com/svn/M-AT/6.0/Source/PgmSource/
 MTUNV2|S6.0.6F  = https://vcfs02.meditech.com/svn/M-AT/6.0.6/Source/PgmSource/
 MTUNV2|S6.0.7F  = https://vcfs02.meditech.com/svn/M-AT/6.0.7/Source/PgmSource/
 MTUNV608|S6.0.8F= https://vcfs02.meditech.com/svn/M-AT/6.0.8/Source/PgmSource/
-
 MTUNV|S61F=https://vcfs02.meditech.com/svn/M-AT/6.1/Source/PgmSource/
 MTUNV2|S6.1.3F=https://vcfs02.meditech.com/svn/M-AT/6.1.3/Source/PgmSource/
 MTUNV614|S6.1.4F=https://vcfs02.meditech.com/svn/M-AT/6.1.4/Source/PgmSource/
 MTUNV615|S6.1.5F=https://vcfs02.meditech.com/svn/M-AT/6.1.5/Source/PgmSource/
+MTUNV3|S6.2=https://vcfs02.meditech.com/svn/M-AT/6.2/Source/PgmSource/
 
+# Development rings
+MTUNV201|D2.01F=https://vcfs02.meditech.com/svn/M-AT/2.0.1/Dev/PgmSource/
+MTUNV2|D6.07F  =https://vcfs02.meditech.com/svn/M-AT/6.0.7/Dev/PgmSource/
+MTUNV608|D6.08F=https://vcfs02.meditech.com/svn/M-AT/6.0.8/Dev/PgmSource/
 MTUNV614|D6.14F=https://vcfs02.meditech.com/svn/M-AT/6.1.4/Dev/PgmSource/
 MTUNV615|D6.15F=https://vcfs02.meditech.com/svn/M-AT/6.1.5/Dev/PgmSource/
 MTUNV616|D6.16F=https://vcfs02.meditech.com/svn/M-AT/6.1.6/Dev/PgmSource/
 
-MTUNV614|T6.14F=https://vcfs02.meditech.com/svn/M-AT/6.1.4/Test/PgmSource/
-MTUNV615|T6.15F=https://vcfs02.meditech.com/svn/M-AT/6.1.5/Test/PgmSource/
+# Testing rings
+MTUNV201|T2.0.1F=https://vcfs02.meditech.com/svn/M-AT/2.0.1/Test/PgmSource/
+MTUNV2|T6.0.7F  =https://vcfs02.meditech.com/svn/M-AT/6.0.7/Test/PgmSource/
+MTUNV608|T6.0.8F=https://vcfs02.meditech.com/svn/M-AT/6.1.4/Test/PgmSource/
+MTUNV614|T6.1.4F=https://vcfs02.meditech.com/svn/M-AT/6.1.4/Test/PgmSource/
+MTUNV615|T6.1.5F=https://vcfs02.meditech.com/svn/M-AT/6.1.5/Test/PgmSource/
 MTUNV616|T6.16F=https://vcfs02.meditech.com/svn/M-AT/6.1.6/Test/PgmSource/
 
-MTUNV3|S6.2=https://vcfs02.meditech.com/svn/M-AT/6.2/Source/PgmSource/
+# Complete rings
+MTUNV201|C2.0.1F=https://vcfs02.meditech.com/svn/M-AT/2.0.1/Complete/PgmSource/
+MTUNV2|C6.0.7F  =https://vcfs02.meditech.com/svn/M-AT/6.0.7/Complete/PgmSource/
+MTUNV608|C6.0.8F=https://vcfs02.meditech.com/svn/M-AT/6.0.8/Complete/PgmSource/
+MTUNV614|C6.1.4F=https://vcfs02.meditech.com/svn/M-AT/6.1.4/Complete/PgmSource/
+MTUNV615|C6.1.5F=https://vcfs02.meditech.com/svn/M-AT/6.1.5/Complete/PgmSource/
+RCUNV61|C6.16F=https://vcfs02.meditech.com/svn/M-AT/6.1.6/Complete/PgmSource/
 
 MTCM|S61F=https://vcfs02.meditech.com/svn/M-AT/MTCM.DEVF/Source/PgmSource/
 MTCM|MTCM.DEVF=https://vcfs02.meditech.com/svn/M-AT/MTCM.DEVF/Source/PgmSource/
 MTCM|INTS61F=https://vcfs02.meditech.com/svn/M-AT/INT/6.1/Source/PgmSource/
 
-# "2.0.x" rings:
-MTUNV20|S20F=https://vcfs02.meditech.com/svn/M-AT/2.0/Source/PgmSource/
-MTUNV201|S2.0.1F=https://vcfs02.meditech.com/svn/M-AT/2.0.1/Source/PgmSource/
-MTUNV201|D2.01F=https://vcfs02.meditech.com/svn/M-AT/2.0.1/Dev/PgmSource/
-MTUNV201|T2.0.1F=https://vcfs02.meditech.com/svn/M-AT/2.0.1/Test/PgmSource/
-MTUNV201|C2.0.1F=https://vcfs02.meditech.com/svn/M-AT/2.0.1/Complete/PgmSource/
+# Version 12:
+MATDEV12|V12F=https://vcfs02.meditech.com/svn/M-AT/6.1.6/v12/PgmSource/
 
 # Home Health Rings
 FIL|FILDEV=svn://boris/maestro/FocusRepos/branches/FILDEV/PgmSource/
 PTCTDEV|DEV24=svn://boris/maestro/FocusRepos/branches/Version.2.4.x/DEV/PgmSource/
 PTCTDEV|DEV25=svn://boris/maestro/FocusRepos/branches/Version.2.5.x/DEV/PgmSource/
 PTCTDEV|DEV26=svn://boris/maestro/FocusRepos/branches/Version.2.6.x/DEV/PgmSource/
-PTCTDEV|DEV27=svn://boris/maestro/FocusRepos/branches/Version.2.7.x/DEV/PgmSource/
+PTCTDEV|S2.7=svn://boris/maestro/FocusRepos/branches/Version.2.7.x/DEV/PgmSource/
 
 # PLR 2.0.x rings
 MTUNV201|PLRD2.0.1F=http://focdev26.meditech.com/svn/ADE_MAT/2.0.1/Dev/PgmSource/
