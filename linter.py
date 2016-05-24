@@ -25,12 +25,18 @@ from SublimeLinter.lint import Linter, util
 
 logger = logging.getLogger(__name__)
 
-ring_matcher = re.compile(
+RING_MATCHER = re.compile(
     r"((.*?\\([^:\\\/\n]+?)\.Universe)\\([^:\\\/\n]+?)\.Ring)(?![^\\])",
     re.IGNORECASE)
 
 
 def get_linter_path():
+    """Return the path that contains the AT Code Checker executable.
+
+    Return:
+        str: Path that containat_code_checker.exe
+
+    """
     return os.path.join(sublime.packages_path(),
                         'SublimeLinter-contrib-at_code_checker',
                         'at_code_checker')
@@ -41,15 +47,15 @@ def create_dir(dir_):
     try:
         os.makedirs(dir_)
         logger.debug("Creating directory %s", dir_)
-    except OSError as e:
-        if e.errno != errno.EEXIST:
+    except OSError as err:
+        if err.errno != errno.EEXIST:
             raise
 
 
 def get_env(environ_name):
     """Return the value of the given environment variable."""
     temp = os.getenv(environ_name)
-    if (temp is None):
+    if temp is None:
         if ('ProgramFiles' in environ_name) or ('ProgramW6432' in environ_name):
             temp = os.getenv('ProgramFiles')
     return temp
@@ -60,7 +66,7 @@ class At_code_checker(Linter):
     """Provides an interface to at_code_checker."""
 
     syntax = ('m-at', 'focus')
-    cmd = 'at-code-checker @'
+    cmd = 'at_code_checker @'
     regex = (
         r"^(?P<filename>.+?) +(?P<line>\d+) : "
         r"(?P<message>(("
@@ -85,7 +91,9 @@ class At_code_checker(Linter):
     @classmethod
     def which(cls, cmd):
         """Return the path for the linter executable."""
-        linter_path = os.path.join(get_linter_path(), 'at_code_checker.exe')
+        logger.debug(cmd)
+        linter_path = os.path.join(get_linter_path(), cmd + '.exe')
+        logger.debug(linter_path)
 
         if not os.path.exists(linter_path):
             return None
@@ -93,8 +101,29 @@ class At_code_checker(Linter):
             return linter_path
 
     def split_match(self, match):
+        """Extracts data from each error result returned from the command.
+
+        Data is extracted using the regex. A tuple of data is returned.
+
+        Arguments:
+            match (re.Match): An re.Match object obtained by using the object's
+                regex attribute and an error line
+
+        Returns:
+            tuple: match - the match object
+                   line - the line on which the error occurred
+                   col - the column on which the error occurred
+                   error - Truthy value if the line indicates an error. Falsey
+                        value otherwise.
+                   warning - Truthy value if the line indicates a warning.
+                        Falsey value otherwise.
+                   message - Message text for the error or warning
+                   near - Text value that the error is near. This text is
+                        underlined when displayed.
+
+        """
         match, line, col, error, warning, message, near = super().split_match(match)
-        if (match is None) or match.group('filename').endswith('.atcc'):
+        if (match is None) or match.group('filename').startswith('atcc-'):
             return match, line, col, error, warning, message, near
 
         fname = match.group('filename')
@@ -133,27 +162,26 @@ class At_code_checker(Linter):
         elif '!DictionarySource' in self.filename:
             return ''
 
-        f = None
-
-        suffix = suffix or self.get_tempfile_suffix()
+        temp = None
 
         try:
-            with tempfile.NamedTemporaryFile(suffix=suffix,
+            with tempfile.NamedTemporaryFile(prefix='atcc-',
+                                             suffix='.focus',
                                              delete=False,
-                                             dir=self.tmpdir()) as f:
+                                             dir=self.tmpdir()) as temp:
                 if isinstance(code, str):
                     code = code.encode('utf-8')
 
-                f.write(code)
-                f.flush()
+                temp.write(code)
+                temp.flush()
 
-            logger.debug("'temp_file=%s", f.name)
+            logger.debug("'temp_file=%s", temp.name)
             cmd = list(cmd)
 
             if '@' in cmd:
-                cmd[cmd.index('@')] = f.name
+                cmd[cmd.index('@')] = temp.name
             else:
-                cmd.append(f.name)
+                cmd.append(temp.name)
 
             out = util.popen(cmd, output_stream=util.STREAM_STDOUT, extra_env=self.env)
 
@@ -163,8 +191,8 @@ class At_code_checker(Linter):
             else:
                 return ''
         finally:
-            if f:
-                os.remove(f.name)
+            if temp:
+                os.remove(temp.name)
 
     def tmpdir(self):
         """Return the temp file directory for the current file.
@@ -193,7 +221,7 @@ class At_code_checker(Linter):
 
         """
         base = tempfile.gettempdir()
-        ring_mo = ring_matcher.match(self.filename)
+        ring_mo = RING_MATCHER.match(self.filename)
         if not ring_mo:
             return base
 
@@ -250,7 +278,7 @@ class ConfigureCodeCheckerCommand(sublime_plugin.ApplicationCommand):
     """Runs the built-in configuration utility for AT Code Checker."""
 
     def run(self):
-
+        """Run the configuration utility for AT Code Checker."""
         configuration_path = os.path.join(get_linter_path(), 'configuration.exe')
 
         if os.path.exists(configuration_path):
@@ -258,10 +286,26 @@ class ConfigureCodeCheckerCommand(sublime_plugin.ApplicationCommand):
 
 
 class OpenWebPageCommand(sublime_plugin.WindowCommand):
+    """Command to opens the specified url in the default browser."""
 
     def run(self, url=''):
+        """Logic used when executing the command.
+
+        Keyword Arguments:
+            url (str): URL string to open.
+
+        """
         if url:
             webbrowser.open(url)
 
     def is_visible(self, url=''):
+        """Determine if the command should be visible.
+
+        Keyword Arguments:
+            url (str): URL string to open.
+
+        Return:
+            bool: True if the command should be visible. False otherwise.
+
+        """
         return bool(url)
