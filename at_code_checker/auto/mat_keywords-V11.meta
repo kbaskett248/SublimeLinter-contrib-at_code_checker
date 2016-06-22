@@ -206,6 +206,14 @@ WebComponent|FlowsheetCell
 WebComponent|FlowsheetColumn
 WebComponent|FlowsheetPivot
 WebComponent|FlowsheetRow
+WebComponent|FlowTable
+WebComponent|FTCell
+WebComponent|FTCellDefault
+WebComponent|FTColumn
+WebComponent|FTColumnLabel
+WebComponent|FTPivot
+WebComponent|FTRow
+WebComponent|FTRowLabel
 WebComponent|GridPanel
 WebComponent|PanelItem
 WebComponent|HorizontalPanel

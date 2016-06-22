@@ -333,7 +333,7 @@ Menu|Options|ConditionHelp|Value
 Menu|Options|ConditionPrint|Value
 Menu|Options|ConditionReferences|Value
 Menu|Options|ConditionSuspend|Value
-Menu|Options|MenuHide|Value
+Menu|Options|HideMenu|Value
 Menu|Options|SuppressAll|Choice
 Menu|Options|SuppressEmail|Choice
 Menu|Options|SuppressHelp|Choice
@@ -939,6 +939,7 @@ Screen|Session|ShowLookupIcon|Value
 Screen|Session|WebSessionAltTitle|Value
 Screen|Session|WebSessionMenuGroup|Value
 Screen|Session|WebSessionSignonInfo|Value
+Screen|Session|WebSplittable|Yes/No
 SearchRecords|Column|Align|Choice
 SearchRecords|Column|LabelAlign|Choice
 SearchRecords|Column|Label|Value
@@ -1339,6 +1340,7 @@ WebComponent|ElementSet|InstanceArrangement|Choice
 WebComponent|ElementSet|Instances|Value
 WebComponent|ElementSet|NumRowsVisible|Value
 WebComponent|EmbeddedWebSite|Height|Value
+WebComponent|EmbeddedWebSite|OnMessage|Value
 WebComponent|EmbeddedWebSite|Source|Value
 WebComponent|EmbeddedWebSite|Width|Value
 WebComponent|ExternalWebComponent|CodeBaseRT|String
@@ -1368,6 +1370,7 @@ WebComponent|FTCell|ContentStyle|Value
 WebComponent|FTCell|DirectText|Value
 WebComponent|FTCell|OnClick|Value
 WebComponent|FTCell|OnRightClick|Value
+WebComponent|FTCell|SortValue|Value
 WebComponent|FTCell|SuppressHorizontalGridLine|Value
 WebComponent|FTCell|SuppressVerticalGridLine|Value
 WebComponent|FTColumnLabel|AlignStyle|Value
@@ -1386,8 +1389,12 @@ WebComponent|FTColumnLabel|HoverBorderStyle|Value
 WebComponent|FTColumnLabel|HoverContentStyle|Value
 WebComponent|FTColumnLabel|OnClick|Value
 WebComponent|FTColumnLabel|OnRightClick|Value
+WebComponent|FTColumnLabel|Selector|Value
+WebComponent|FTColumnLabel|SortOptions|Value
+WebComponent|FTColumnLabel|Sortable|Value
 WebComponent|FTColumnLabel|SuppressVerticalGridLine|Value
-WebComponent|FTColumnLabel|Width|Value
+WebComponent|FTColumn|TriggerContentRefresh|Value
+WebComponent|FTColumn|Width|Value
 WebComponent|FTPivot|AlignStyle|Value
 WebComponent|FTPivot|BorderStyle|Value
 WebComponent|FTPivot|Clickable|Value
@@ -1403,6 +1410,9 @@ WebComponent|FTPivot|HoverBorderStyle|Value
 WebComponent|FTPivot|HoverContentStyle|Value
 WebComponent|FTPivot|OnClick|Value
 WebComponent|FTPivot|OnRightClick|Value
+WebComponent|FTPivot|Selector|Value
+WebComponent|FTPivot|SortOptions|Value
+WebComponent|FTPivot|Sortable|Value
 WebComponent|FTPivot|SuppressHorizontalGridLine|Value
 WebComponent|FTPivot|SuppressVerticalGridLine|Value
 WebComponent|FTRowLabel|AlignStyle|Value
@@ -1416,13 +1426,16 @@ WebComponent|FTRowLabel|ContainerBorderStyle|Value
 WebComponent|FTRowLabel|ContainerContentStyle|Value
 WebComponent|FTRowLabel|ContentStyle|Value
 WebComponent|FTRowLabel|DirectText|Value
-WebComponent|FTRowLabel|Height|Value
 WebComponent|FTRowLabel|HoverBorderStyle|Value
 WebComponent|FTRowLabel|HoverContentStyle|Value
 WebComponent|FTRowLabel|OnClick|Value
 WebComponent|FTRowLabel|OnRightClick|Value
+WebComponent|FTRowLabel|Selector|Value
+WebComponent|FTRowLabel|SortValue|Value
 WebComponent|FTRowLabel|SuppressHorizontalGridLine|Value
 WebComponent|FTRowLabel|Width|Value
+WebComponent|FTRow|Height|Value
+WebComponent|FTRow|TriggerContentRefresh|Value
 WebComponent|FlowPanel|AlwaysShowScrollbars|Yes/No
 WebComponent|FlowPanel|BorderStyle|Value
 WebComponent|FlowPanel|Clickable|Value
@@ -1447,11 +1460,16 @@ WebComponent|FlowTable|ColumnLabelValue|Value
 WebComponent|FlowTable|ColumnValue|Value
 WebComponent|FlowTable|GridBorderStyle|Value
 WebComponent|FlowTable|Height|Value
+WebComponent|FlowTable|InitialSort|Value
+WebComponent|FlowTable|OnAfterSort|Value
+WebComponent|FlowTable|OnDestroy|Value
 WebComponent|FlowTable|OnRequestAdditionalSide|Keyword
 WebComponent|FlowTable|OnRequestAdditional|Value
 WebComponent|FlowTable|RowLabelValue|Value
 WebComponent|FlowTable|RowValue|Value
 WebComponent|FlowTable|ScrollTo|Value
+WebComponent|FlowTable|SelectedBorderStyle|Value
+WebComponent|FlowTable|SelectedContentStyle|Value
 WebComponent|FlowsheetCell|AlignStyle|Value
 WebComponent|FlowsheetCell|BorderStyle|Value
 WebComponent|FlowsheetCell|Clickable|Value
@@ -1563,6 +1581,7 @@ WebComponent|HorizontalPanel|MinHeight|Value
 WebComponent|HorizontalPanel|MinWidth|Value
 WebComponent|HorizontalPanel|OnClick|Value
 WebComponent|HorizontalPanel|OnRightClick|Value
+WebComponent|HorizontalPanel|PinnedLevel|Value
 WebComponent|HorizontalPanel|PrintArea|Value
 WebComponent|HorizontalPanel|Scroll|Choice
 WebComponent|HorizontalPanel|TriggerContentRefresh|Value
@@ -2012,6 +2031,7 @@ WebComponent|PanelItem|RemainderFactor|Value
 WebComponent|PanelItem|RemoteRequiredIndicator|Value
 WebComponent|PanelItem|ShowCondition|Value
 WebComponent|PanelItem|ShowForAccordionState|Choice
+WebComponent|PanelItem|ShrinkTextToFit|Choice
 WebComponent|PanelItem|Spacer|Value
 WebComponent|PanelItem|SuppressFromPrint|Choice
 WebComponent|PanelItem|ValidationFailureExempt|Choice
@@ -2271,6 +2291,7 @@ WebComponent|SelectColumn|Value|Value
 WebComponent|SelectColumn|Width|Value
 WebComponent|SelectionGroup|Columns|Value
 WebComponent|SelectionGroup|EventCallback|Value
+WebComponent|SelectionGroup|EventStateTransition|Value
 WebComponent|SelectionGroup|FocusSelectedBorderStyle|Value
 WebComponent|SelectionGroup|FocusSelectedContentStyle|Value
 WebComponent|SelectionGroup|FocusSelectedDivBorderStyle|Value
@@ -2362,6 +2383,7 @@ WebComponent|Text|LabelForInput|Value
 WebComponent|Text|OnClick|Value
 WebComponent|Text|OnRightClick|Value
 WebComponent|Text|RemoteRequiredIndicator|Value
+WebComponent|Text|ShrinkTextToFit|Keyword
 WebComponent|Text|SuppressLinkUnderline|Keyword
 WebComponent|Text|Value|Value
 WebComponent|Text|Wrap|Keyword
@@ -2419,6 +2441,7 @@ WebComponent|VerticalPanel|MinHeight|Value
 WebComponent|VerticalPanel|MinWidth|Value
 WebComponent|VerticalPanel|OnClick|Value
 WebComponent|VerticalPanel|OnRightClick|Value
+WebComponent|VerticalPanel|PinnedLevel|Value
 WebComponent|VerticalPanel|PrintArea|Value
 WebComponent|VerticalPanel|Scroll|Choice
 WebComponent|VerticalPanel|TriggerContentRefresh|Value
@@ -2577,6 +2600,7 @@ WebRoutine|Program|OnMasterExit|Value
 WebRoutine|Program|OnNotificationMessage|Value
 WebRoutine|Program|OnOrientationChange|Value
 WebRoutine|Program|OnProcessMessage|Value
+WebRoutine|Program|OnTerminate|Value
 WebRoutine|Program|OnToolsetMessage|Value
 WebRoutine|Program|OnTwoFingerSwipe|Value
 WebRoutine|Program|OnWebPdfViewerMessage|Value

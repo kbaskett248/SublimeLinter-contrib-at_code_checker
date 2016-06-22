@@ -1,0 +1,5 @@
+Updating AT Code Checker to v2016.05.13 "Lithium"
+
+- Restores some FS functions that were omitted in the previous release for M-AT versions 10 and 11.
+- Optimized and refactored code that gathers source files using ANP.
+- Messages from Include files can now be filtered out using the "Ignore warnings in Includes" option in the configuration tool.

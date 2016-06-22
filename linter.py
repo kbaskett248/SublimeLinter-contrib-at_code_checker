@@ -126,17 +126,17 @@ class At_code_checker(Linter):
         if (match is None) or match.group('filename').startswith('atcc-'):
             return match, line, col, error, warning, message, near
 
-        fname = match.group('filename')
+        temp_name = match.group('filename')
         if ((self.LastIncludeMatch is not None) and
-                (self.LastIncludeMatch[0:2] == (self.filename, fname))):
+                (self.LastIncludeMatch[0:2] == (self.filename, temp_name))):
             region = self.LastIncludeMatch[2]
         else:
-            region = self.view.find(r"\s*File\s+" + fname, 0)
-            self.LastIncludeMatch = (self.filename, fname, region)
+            region = self.view.find(r"\s*File\s+" + temp_name, 0)
+            self.LastIncludeMatch = (self.filename, temp_name, region)
 
         if region is not None:
             line = self.view.rowcol(region.begin())[0] + 1
-            near = fname
+            near = temp_name
             return match, line, col, error, warning, message, near
         else:
             return match, None, None, None, None, None, None

@@ -385,6 +385,7 @@
 @GetWindowTitle
 @GiveProcessFocus
 @GiveProcessFocusRaw
+@GiveProcessFocusSplit
 @GotoComponent
 @GotoElement
 @GotoPage
@@ -563,6 +564,7 @@
 @Ping
 @PopupNotify
 @PostClientMessage
+@PostEmbeddedWebSiteMessage
 @PrepHCISForConversions
 @PrepareProgressiveConversionForDP
 @PreviousRID
@@ -690,6 +692,7 @@
 @SetBodyTitle
 @SetCheckboxHighlight
 @SetControlState
+@SetCookie
 @SetCounterAhead
 @SetCurrentBodyButtons
 @SetCurrentConversionTask
@@ -720,6 +723,7 @@
 @SetTimeStampAppData
 @SetTimeStampEnvData
 @SetTimer
+@SetTypeAheadSeedValue
 @SetWebAssistedEntryReturnValue
 @SetWebColumnSort
 @SetWebRoutineTitle
@@ -813,10 +817,12 @@
 @WPLCastRecursiveArray
 @WPLData
 @WPLDisplay
+@WPLGetClientGuid
 @WPLHash
 @WPLMode
 @WPLReferenceExternal
 @WPLReferenceInternal
+@WPLTopLevelObject
 @WaitForProcess
 @WaitForProcessRaw
 @WebBreak

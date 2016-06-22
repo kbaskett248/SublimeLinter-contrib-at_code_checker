@@ -364,6 +364,7 @@
 @GetStateVariable
 @GetSum
 @GetSystemVariable
+@GetTCPProxyArriveQueueMessage
 @GetTimeOffsetForGmt
 @GetTimeOffsetForLocal
 @GetTimeZoneDescription
@@ -392,6 +393,7 @@
 @GetWindowTitle
 @GiveProcessFocus
 @GiveProcessFocusRaw
+@GiveProcessFocusSplit
 @GotoComponent
 @GotoElement
 @GotoPage
@@ -523,8 +525,10 @@
 @ListRecordHxStoreRIDs
 @ListReorderedRIDsRT
 @ListSecurityPackages
+@LoadDataDefSet
 @LoadDllLibrary
 @LoadExternalPageSet
+@LoadExternalSubroutineSet
 @LoadMText
 @LoadToolset
 @Log
@@ -581,6 +585,7 @@
 @Ping
 @PopupNotify
 @PostClientMessage
+@PostEmbeddedWebSiteMessage
 @PrepHCISForConversions
 @PrepareProgressiveConversionForDP
 @PreviousRID
@@ -700,6 +705,7 @@
 @ScrollToItem
 @ScrollToPosition
 @SearchLogEvents
+@SearchTCPProxyArriveQueue
 @SelectCDRowSet
 @SelectCol
 @SelectColName
@@ -718,6 +724,7 @@
 @SetBodyTitle
 @SetCheckboxHighlight
 @SetControlState
+@SetCookie
 @SetCounterAhead
 @SetCurrentBodyButtons
 @SetCurrentConversionTask
@@ -748,6 +755,7 @@
 @SetTimeStampAppData
 @SetTimeStampEnvData
 @SetTimer
+@SetTypeAheadSeedValue
 @SetWebAssistedEntryReturnValue
 @SetWebColumnSort
 @SetWebRoutineTitle
@@ -841,6 +849,7 @@
 @ValidElementRT
 @ValidExtToInt
 @ValidExtToIntRT
+@ValidOID
 @ValidRT
 @VerifyANPService
 @VerifyProgressiveConversion
@@ -853,10 +862,12 @@
 @WPLCastRecursiveArray
 @WPLData
 @WPLDisplay
+@WPLGetClientGuid
 @WPLHash
 @WPLMode
 @WPLReferenceExternal
 @WPLReferenceInternal
+@WPLTopLevelObject
 @WaitForProcess
 @WaitForProcessRaw
 @WebBreak
@@ -878,3 +889,4 @@
 @WithinNestedLookup
 @WriteLogEvent
 @WritePrintStream
+@WriteTCPProxyReturnQueue

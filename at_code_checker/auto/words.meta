@@ -4245,6 +4245,7 @@ GetSortIndicator
 GetStateVariable
 GetSum
 GetSystemVariable
+GetTCPProxyArriveQueueMessage
 GetTimeOffsetForGmt
 GetTimeOffsetForLocal
 GetTimeZoneDescription
@@ -4316,6 +4317,7 @@ Gish
 Giuseppe
 GiveProcessFocus
 GiveProcessFocusRaw
+GiveProcessFocusSplit
 Giza
 Gk
 Gl
@@ -6501,8 +6503,10 @@ Llewelyn
 Lloyd
 Lloyds
 Loa
+LoadDataDefSet
 LoadDllLibrary
 LoadExternalPageSet
+LoadExternalSubroutineSet
 LoadMText
 LoadToolset
 Locke
@@ -8672,6 +8676,7 @@ Portugal
 Portuguese
 Poseidon
 PostClientMessage
+PostEmbeddedWebSiteMessage
 Postimpressionism
 Potawatomi
 Potomac
@@ -9351,6 +9356,7 @@ SV
 SW
 SZ
 Sa
+SaaS
 Saar
 Saarland
 Sabah
@@ -9621,6 +9627,7 @@ Seaford
 Seagram
 Sean
 SearchLogEvents
+SearchTCPProxyArriveQueue
 Seattle
 Sebastian
 Seder
@@ -9684,6 +9691,7 @@ SetBodyButtonState
 SetBodyTitle
 SetCheckboxHighlight
 SetControlState
+SetCookie
 SetCounterAhead
 SetCurrentBodyButtons
 SetCurrentConversionTask
@@ -9714,6 +9722,7 @@ SetSubBodyButtonState
 SetTimeStampAppData
 SetTimeStampEnvData
 SetTimer
+SetTypeAheadSeedValue
 SetWebAssistedEntryReturnValue
 SetWebColumnSort
 SetWebRoutineTitle
@@ -11012,6 +11021,7 @@ ValidElementExtToIntRT
 ValidElementRT
 ValidExtToInt
 ValidExtToIntRT
+ValidOID
 ValidRT
 Valium
 Valkyrie
@@ -11604,10 +11614,12 @@ WPLCastNumber
 WPLCastRecursiveArray
 WPLData
 WPLDisplay
+WPLGetClientGuid
 WPLHash
 WPLMode
 WPLReferenceExternal
 WPLReferenceInternal
+WPLTopLevelObject
 WT
 WU
 WV
@@ -11896,6 +11908,7 @@ Wrangell
 Wrigley
 WriteLogEvent
 WritePrintStream
+WriteTCPProxyReturnQueue
 Wroclaw
 Wt
 Wu
@@ -103131,6 +103144,7 @@ toolmaker
 toolmakers
 tools
 toolsets
+tooltip
 toot
 tooted
 tooter
@@ -106527,6 +106541,7 @@ undividable
 undivided
 undivulged
 undo
+undoable
 undock
 undocked
 undocks
