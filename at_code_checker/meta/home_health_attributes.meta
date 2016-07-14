@@ -60,6 +60,7 @@ ScreenPage|ContainerPage|ExitCondition|Value
 ScreenPage|ContainerPage|OnAfterFirstRender|Value
 ScreenPage|ContainerPage|OnEntry|Value
 ScreenPage|ContainerPage|OnExit|Value
+ScreenPage|ContainerPage|OnWindowResize|Value
 ScreenPage|Region||Value
 Tree|Column|Label|Value
 Tree|Column|Width|Value
