@@ -1,0 +1,4 @@
+Updating AT Code Checker to v2016.08.29 "Beryllium"
+
+- Addresses a false warning for uses of @SortRecords with code arguments that included commas.
+- Includes minor fixes and improvements. 

@@ -63,16 +63,20 @@ DataDef|IndexKey|AllowNilValue|Yes/No
 DataDef|IndexKey|DisplayOnly|Yes/No
 DataDef|IndexKey|Normalization|Value
 DataDef|IndexKey|Pattern|Choice
+DataDef|IndexKey|SourceObjectKey|Choice
 DataDef|IndexKey|SuppressOriginalValue|Yes/No
 DataDef|Index|Condition|Value
 DataDef|Index|FileType|String
 DataDef|Index|FirstKeyFolder|Yes/No
+DataDef|Index|FormRecordsCondition|Value
 DataDef|Index|IntraObject|Name
 DataDef|Index|LastVersionNumber|Decimal
 DataDef|Index|LastVersionRelease|String
 DataDef|Index|PhysicalName|String
 DataDef|Index|RebuildLogicCodeBase|String
 DataDef|Index|RebuildLogicMemberName|String
+DataDef|Index|RebuildLogicOIDMapMemberName|String
+DataDef|Index|RebuildLogicSourceFilesMemberName|String
 DataDef|Index|RebuildLogicSubroutineSet|String
 DataDef|Index|RootTT|String
 DataDef|Key|ChoiceMap|Value
@@ -713,6 +717,7 @@ ScreenComponent|Element|LabelRightIconAction|Value
 ScreenComponent|Element|LabelRightIconHover|Value
 ScreenComponent|Element|LabelRightIcon|Value
 ScreenComponent|Element|Label|Value
+ScreenComponent|Element|Length|Integer
 ScreenComponent|Element|LookupCondition|Value
 ScreenComponent|Element|MultiSelectLookup|Yes/No
 ScreenComponent|Element|OnAfterChangeRendered|Value
@@ -875,6 +880,7 @@ ScreenPage|Row|Border|Yes/No
 ScreenPage|Row|DisplayPosition|Value
 ScreenPage|Row|IndentLevel|Integer
 ScreenPage|Row|Matrix|Choice
+ScreenPage|Row|MaximizeWidth|Yes/No
 ScreenPage|Row|OnBeforeRender|Value
 ScreenPage|Row|Style|Value
 ScreenPage|Row|WPLShade|Value
@@ -1023,6 +1029,7 @@ Search|SelectedItemsPage|NumRows|Value
 Search|SelectedItemsPage|OnAfterDetail|Value
 Search|SelectedItemsPage|OnBeforeDetail|Value
 Toolset|Toolset|DllFile|String
+Toolset|Toolset|PWebUseUwiShim|Yes/No
 Toolset|Tool|Position|Integer
 Translation|Options|Result|Choice
 Translation|Product|CodeBase|String
@@ -1455,6 +1462,7 @@ WebComponent|FlowPanel|Scroll|Choice
 WebComponent|FlowPanel|TriggerContentRefresh|Value
 WebComponent|FlowPanel|Value|Value
 WebComponent|FlowPanel|Width|Value
+WebComponent|FlowTable|AlternatingContentStyle|Value
 WebComponent|FlowTable|Arrangement|Keyword
 WebComponent|FlowTable|ColumnLabelValue|Value
 WebComponent|FlowTable|ColumnValue|Value
@@ -1463,10 +1471,13 @@ WebComponent|FlowTable|Height|Value
 WebComponent|FlowTable|InitialSort|Value
 WebComponent|FlowTable|OnAfterSort|Value
 WebComponent|FlowTable|OnDestroy|Value
+WebComponent|FlowTable|OnIncrementalLoad|Value
 WebComponent|FlowTable|OnRequestAdditionalSide|Keyword
 WebComponent|FlowTable|OnRequestAdditional|Value
+WebComponent|FlowTable|ProvidesScrolling|Keyword
 WebComponent|FlowTable|RowLabelValue|Value
 WebComponent|FlowTable|RowValue|Value
+WebComponent|FlowTable|ScrollProvider|Value
 WebComponent|FlowTable|ScrollTo|Value
 WebComponent|FlowTable|SelectedBorderStyle|Value
 WebComponent|FlowTable|SelectedContentStyle|Value
@@ -1606,6 +1617,7 @@ WebComponent|HorizontalSlider|OnRightClick|Value
 WebComponent|ImageAnnotate|DisableNumbering|Value
 WebComponent|ImageAnnotate|Height|Value
 WebComponent|ImageAnnotate|OnAnnotate|Value
+WebComponent|ImageAnnotate|OnClick|Value
 WebComponent|ImageAnnotate|ToolbarPaletteCallback|Value
 WebComponent|ImageAnnotate|Toolbar|Value
 WebComponent|ImageAnnotate|Value|Value
@@ -1727,6 +1739,8 @@ WebComponent|InputTextArea|Disabled|Value
 WebComponent|InputTextArea|ElementName|Object
 WebComponent|InputTextArea|Length|Value
 WebComponent|InputTextArea|OnChange|Value
+WebComponent|InputTextArea|OnKeypressMinMatchChars|Value
+WebComponent|InputTextArea|OnKeypress|Value
 WebComponent|InputTextArea|OverrideGrayText|Value
 WebComponent|InputTextArea|RID|Value
 WebComponent|InputTextArea|Rows|Value
@@ -1738,7 +1752,7 @@ WebComponent|InputText|AssistedEntry|Value
 WebComponent|InputText|AuthorizeNetField|Choice
 WebComponent|InputText|BarcodeOnly|Yes/
 WebComponent|InputText|BarcodeScanNoAdvance|Yes/
-WebComponent|InputText|BlinkMode|Choice
+WebComponent|InputText|BlinkMode|Yes/
 WebComponent|InputText|CaretOnFocus|Choice
 WebComponent|InputText|Choices|Value
 WebComponent|InputText|CybersourceField|Choice
@@ -1748,6 +1762,7 @@ WebComponent|InputText|ElementName|Object
 WebComponent|InputText|InputMethod|Choice
 WebComponent|InputText|Length|Value
 WebComponent|InputText|OnChange|Value
+WebComponent|InputText|OnEnterNoChange|Value
 WebComponent|InputText|OnKeypressMinMatchChars|Value
 WebComponent|InputText|OnKeypress|Value
 WebComponent|InputText|OverrideGrayText|Value
@@ -1930,10 +1945,13 @@ WebComponent|Matrix|RowValue|Value
 WebComponent|Matrix|VerticalGridLines|Value
 WebComponent|Matrix|VerticalLabelGridLines|Value
 WebComponent|Matrix|Width|Value
+WebComponent|Meditor|CompactBorderStyle|Value
 WebComponent|Meditor|Compact|Choice
 WebComponent|Meditor|ElementName|Object
 WebComponent|Meditor|Height|Value
+WebComponent|Meditor|MaxHeight|Value
 WebComponent|Meditor|Method|Choice
+WebComponent|Meditor|MinHeight|Value
 WebComponent|Meditor|ModeUndoRedo|Value
 WebComponent|Meditor|ModeViewEdit|Value
 WebComponent|Meditor|OnAutoSave|Value
@@ -1954,6 +1972,7 @@ WebComponent|MenuItem|AlignStyle|Value
 WebComponent|MenuItem|AuthorizeNetSubmit|Keyword
 WebComponent|MenuItem|BorderStyle|Value
 WebComponent|MenuItem|Bounce|Keyword
+WebComponent|MenuItem|ClientAction|Value
 WebComponent|MenuItem|ContentStyle|Value
 WebComponent|MenuItem|DisabledContentStyle|Value
 WebComponent|MenuItem|Disabled|Value
@@ -2009,6 +2028,7 @@ WebComponent|PDFFile|Width|Value
 WebComponent|PanelItem|AlignStyle|Value
 WebComponent|PanelItem|BorderStyle|Value
 WebComponent|PanelItem|Clickable|Value
+WebComponent|PanelItem|ClientAction|Value
 WebComponent|PanelItem|ComponentName|String
 WebComponent|PanelItem|ComponentRT|Value
 WebComponent|PanelItem|ComponentType|Type
@@ -2105,6 +2125,7 @@ WebComponent|RTElement|Label|Value
 WebComponent|RTElement|LookupCondition|Value
 WebComponent|RTElement|OnBlur|Value
 WebComponent|RTElement|OnChange|Value
+WebComponent|RTElement|OnEnterNoChange|Value
 WebComponent|RTElement|OnFocus|Value
 WebComponent|RTElement|OnKeypressMinMatchChars|Value
 WebComponent|RTElement|OnKeypress|Value
@@ -2392,7 +2413,7 @@ WebComponent|TimePicker|HourLabelInterval|Value
 WebComponent|TimePicker|HourRange|Value
 WebComponent|TimePicker|HourStep|Value
 WebComponent|TimePicker|HourTicks|Value
-WebComponent|TimePicker|InputText|String
+WebComponent|TimePicker|InputText|Value
 WebComponent|TimePicker|KnobBorderStyle|Value
 WebComponent|TimePicker|KnobContentStyle|Value
 WebComponent|TimePicker|KnobSelectedBorderStyle|Value
@@ -2509,7 +2530,6 @@ WebRegion|Component|ContainerBorderStyle|Value
 WebRegion|Component|ContainerContentStyle|Value
 WebRegion|Component|ContentStyle|Value
 WebRegion|Component|DirectText|Value
-WebRegion|Component|InputId|Value
 WebRegion|Component|IterateOn|Value
 WebRegion|Component|IterateWithPrior|Choice
 WebRegion|Component|Name|String
@@ -2592,6 +2612,7 @@ WebRoutine|Program|InactivityTimerInterval|Value
 WebRoutine|Program|InactivityTimer|Value
 WebRoutine|Program|MaxWidth|Number
 WebRoutine|Program|MinWidth|Number
+WebRoutine|Program|OnClientActionMessage|Value
 WebRoutine|Program|OnClientTimer|Value
 WebRoutine|Program|OnEntry|Value
 WebRoutine|Program|OnExit|Value
@@ -2610,6 +2631,7 @@ WebRoutine|Program|OverrideResponse|Value
 WebRoutine|Program|OverrideType|Keyword
 WebRoutine|Program|RadioInputStyle|Value
 WebRoutine|Program|RegionLayoutFontSize|Keyword
+WebRoutine|Program|Splittable|Yes/No
 WebRoutine|Program|StartPage|Value
 WebRoutine|Program|TargetBrowser|Keyword
 WebRoutine|Program|TextInputStyle|String
@@ -2621,6 +2643,8 @@ WebRoutine|Program|WebSessionAltTitle|Value
 WebRoutine|Program|WebSessionMenuGroup|Value
 WebRoutine|Program|WebSessionSignonInfo|Value
 WebRoutine|Redirection|DesktopRedirect|Value
+WebRoutine|Redirection|MobileAppPhoneRedirect|Value
+WebRoutine|Redirection|MobileAppTabletRedirect|Value
 WebRoutine|Redirection|PhoneRedirect|Value
 WebRoutine|Redirection|TabletRedirect|Value
 WebStyleHH|AlignStyle|Horiz|Choice
@@ -2676,6 +2700,7 @@ WebStyle|SpriteSheet|VerticalGap|Value
 WebStyle|Sprite|Col|Value
 WebStyle|Sprite|Height|Value
 WebStyle|Sprite|Left|Value
+WebStyle|Sprite|Rotate|Value
 WebStyle|Sprite|Row|Value
 WebStyle|Sprite|Top|Value
 WebStyle|Sprite|Width|Value

@@ -89,6 +89,7 @@
 @CheckRequiredFields
 @CheckStructuredImport
 @CleanupDistributedProcessing
+@CleanupProgressiveDistributedProcessingWorkspaces
 @ClearInitialSort
 @ClearObjectDirtyFlags
 @ClearObjectDirtyFlagsRT
@@ -194,16 +195,20 @@
 @DiscardConversionCrawler
 @DiscardProgressiveConversion
 @DiscardTxn
+@DisplayCheckBox
 @DisplayHelp
 @DisplayIcon
 @DisplayNavBar
+@DisplayRadioButton
 @DisplayScrollBar
 @DisplayScrollBarRT
+@DisplayToggle
 @ElementInfo
 @EnableServerCurrentRecordCaching
 @EnumerateObjectFiles
 @EnumeratePrinters
 @ExistsInList
+@ExitFullscreen
 @ExitProcess
 @ExitProcessTimeout
 @ExitScreen
@@ -393,7 +398,6 @@
 @GetWindowTitle
 @GiveProcessFocus
 @GiveProcessFocusRaw
-@GiveProcessFocusSplit
 @GotoComponent
 @GotoElement
 @GotoPage
@@ -678,6 +682,7 @@
 @ResizeChildWebRoutine
 @RestoreObjectSnapshot
 @RestoreObjectSnapshotRT
+@RetrieveConsolidatedDistributedProcessingIncompleteLog
 @RetrieveDistributedProcessingIncompleteLog
 @RetrieveExternalFile
 @RetrieveExternalFileCx
@@ -713,6 +718,7 @@
 @SelectRID
 @SelectRow
 @SelectUD
+@SendMessageToMobileApp
 @SendProcessMessage
 @SendProcessMessageRaw
 @SendProcessPassword
@@ -774,6 +780,7 @@
 @SkipProgressiveConversion
 @SortRecords
 @SortRecordsByColumn
+@SplitProcess
 @StackMemory
 @StartConversionCrawler
 @StartProgressiveConversion
@@ -835,6 +842,7 @@
 @ToInternalRT
 @TriggerContentGeneration
 @TriggerCx
+@TriggerIncrementalLoad
 @UnloadToolset
 @UnstackMemory
 @UpdateCodeBase
@@ -870,6 +878,7 @@
 @WPLTopLevelObject
 @WaitForProcess
 @WaitForProcessRaw
+@WebAppServerLog
 @WebBreak
 @WebClearSelectValues
 @WebLogoff

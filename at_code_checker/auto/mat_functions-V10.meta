@@ -116,9 +116,12 @@
 @ConvertListToOID
 @ConvertMTextToPlainText
 @ConvertMTextToPlainTextWithoutTabs
+@ConvertMTextToUnicode
+@ConvertMTextToUnicodeWithoutTabs
 @ConvertMTexttoWebRichText
 @ConvertOIDToList
 @ConvertPlainTextToMText
+@ConvertUnicodeToMText
 @ConvertWebRichTexttoMText
 @CopyFile
 @CopyFileClear
@@ -680,6 +683,7 @@
 @TextEditorDefaultFont
 @TextEditorDirty
 @TextEditorGetCurrentFormat
+@TextEditorGetDefaultFont
 @TextEditorGetPosition
 @TextEditorHereField
 @TextEditorLocate
@@ -698,6 +702,7 @@
 @TextInsertTop
 @TextJoin
 @TextReadFromEditor
+@TextUpdate
 @TimeStampAppData
 @TimeStampAuthenticatedUser
 @TimeStampDateTime
