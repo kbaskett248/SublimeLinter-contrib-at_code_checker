@@ -925,6 +925,7 @@ Search|SelectedItemsPage|NumRows|Value
 Search|SelectedItemsPage|OnAfterDetail|Value
 Search|SelectedItemsPage|OnBeforeDetail|Value
 Toolset|Toolset|DllFile|String
+Toolset|Toolset|OnLoad|Value
 Toolset|Tool|Position|Integer
 Translation|Options|Result|Choice
 Translation|Product|CodeBase|String

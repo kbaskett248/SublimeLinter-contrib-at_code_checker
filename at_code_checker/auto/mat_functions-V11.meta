@@ -21,6 +21,7 @@
 @AssociateObjectWithTxn
 @AssociateObjectWithTxnRT
 @AssociateStructuredFlushWithTxn
+@AuthNetGetTransactionDetails
 @BarcodeIsSupported
 @BarcodeRead
 @BeforeRID
@@ -87,6 +88,7 @@
 @CheckRequired
 @CheckRequiredAndGrid
 @CheckRequiredFields
+@CheckRequiredRecords
 @CleanupDistributedProcessing
 @CleanupProgressiveDistributedProcessingWorkspaces
 @ClearInitialSort
@@ -137,6 +139,7 @@
 @CopyFileClear
 @CopyProgramToSessionCache
 @CounterFilePath
+@CreateCompRef
 @CreateConversionTask
 @CreateDirectory
 @CreateDirectoryEnumFile
@@ -184,6 +187,7 @@
 @DeleteRunTimeIcon
 @DeleteRuntimeRecordTable
 @DeleteSynchList
+@DeserializeObject
 @DisableGoverningMutex
 @DisableGoverningMutexRT
 @DisableReportFolio
@@ -200,6 +204,7 @@
 @DisplayScrollBar
 @DisplayScrollBarRT
 @DisplayToggle
+@DoesComponentExist
 @ElementInfo
 @EnableServerCurrentRecordCaching
 @EnumerateObjectFiles
@@ -225,6 +230,7 @@
 @FileExitEditorClear
 @FileExitViewer
 @FileFullyInMemory
+@FileFullyInMemoryRT
 @FileInfo
 @FilenameToInternal
 @FinalizeProgressiveConversion
@@ -251,6 +257,7 @@
 @FreeDllLibrary
 @GenerateAll
 @GenerateBarcode
+@GenerateContent
 @GenerateExternalFileVersion
 @GenerateExternalFileVersionRT
 @GenerateGuid
@@ -362,6 +369,7 @@
 @GetStateVariable
 @GetSum
 @GetSystemVariable
+@GetTCPProxyArriveQueueMessage
 @GetTimeOffsetForGmt
 @GetTimeOffsetForLocal
 @GetTimeZoneDescription
@@ -375,6 +383,8 @@
 @GetTypeJustification
 @GetUserInput
 @GetWebAssistedEntryArgument
+@GetWebBaseUrl
+@GetWebBrowserFlag
 @GetWebCurrentInstance
 @GetWebFileInfo
 @GetWebFormValue
@@ -404,6 +414,7 @@
 @Hang
 @HasConversionAlreadyRun
 @Hash
+@HashFile
 @HideAlert
 @HideWorkingIndicator
 @ImageAnnotate
@@ -471,6 +482,8 @@
 @IntraObjectIndexPath
 @InvokeDllFunction
 @IsWebAssistedEntryForced
+@JsonCast
+@JsonCastRT
 @JsonDecode
 @JsonEncode
 @Key
@@ -484,6 +497,7 @@
 @LaunchParentProcess
 @LaunchRemoteDebugger
 @LaunchWebRoutine
+@LinkPanelScrolling
 @ListAllProcesses
 @ListBehaviors
 @ListChangedRecords
@@ -513,8 +527,10 @@
 @ListRecordHxStoreRIDs
 @ListReorderedRIDsRT
 @ListSecurityPackages
+@LoadDataDefSet
 @LoadDllLibrary
 @LoadExternalPageSet
+@LoadExternalSubroutineSet
 @LoadMText
 @LoadToolset
 @Log
@@ -523,6 +539,7 @@
 @LogEventKeyExternal
 @MarkFileForAbolishment
 @MarkMissingFields
+@MarkMissingRecords
 @MarkObjectAsMemoryOnly
 @MaxClientKey
 @MenuButtonClickable
@@ -547,6 +564,7 @@
 @OIDToFilename
 @ObjectChanged
 @ObjectFilePath
+@ObjectInfo
 @ObjectSnapshotExists
 @OpenDirectoryEnumFile
 @OpenDirectoryForDirectories
@@ -564,6 +582,7 @@
 @OpenReportSession
 @OrderFields
 @OverrideWebRequestTimeout
+@OverrideWebWaitMessage
 @PhysicalFilePath
 @Ping
 @PopupNotify
@@ -616,6 +635,7 @@
 @RecordTag
 @RecordsChanged
 @RecordsFullyInMemory
+@RecordsFullyInMemoryRT
 @RedirectToExternalURL
 @RedirectToPopUpWebRoutine
 @RedirectToWebRoutine
@@ -625,6 +645,7 @@
 @RegisterHelpTopicPage
 @ReleaseMutex
 @ReleaseMutexes
+@ReloadWebValidationProgram
 @RelocateOIDIndex
 @RemoveBehavior
 @RemoveBranchDown
@@ -644,6 +665,7 @@
 @ReplaceHTMLSpecialChars
 @ReportBorderExists
 @ReportFolioExists
+@ReportIsExporting
 @ReportTerminated
 @ResetConversionCrawler
 @ResetConversionTask
@@ -680,6 +702,7 @@
 @ScrollToItem
 @ScrollToPosition
 @SearchLogEvents
+@SearchTCPProxyArriveQueue
 @SelectCDRowSet
 @SelectCol
 @SelectColName
@@ -692,6 +715,7 @@
 @SendProcessMessageRaw
 @SendProcessPassword
 @SendProcessPasswordRaw
+@SerializeObject
 @SetAccordionState
 @SetActiveWebSessionMenu
 @SetBodyButtonState
@@ -711,6 +735,7 @@
 @SetDisplayIgnoreNavInputFlag
 @SetErrorTrapFolder
 @SetFocusExternalApp
+@SetFocusSearchSeed
 @SetFooterButtonState
 @SetFooterButtonStateRT
 @SetGraphColor
@@ -718,6 +743,7 @@
 @SetIPCAppBitFlag
 @SetImageScaling
 @SetImportFlag
+@SetMImageLib
 @SetMenuButtonState
 @SetMenuTopIcon
 @SetNetworkZone
@@ -733,6 +759,8 @@
 @SetWebAssistedEntryReturnValue
 @SetWebColumnSort
 @SetWebRoutineTitle
+@SetWebSessionMenuColor
+@SetWebSessionProcGroups
 @SetWebWaitMessage
 @SetWindowTitle
 @ShowAlert
@@ -752,6 +780,9 @@
 @StackMemory
 @StartConversionCrawler
 @StartProgressiveConversion
+@StreamDecode
+@StreamEncode
+@StreamError
 @SubBodyButtonSelected
 @TerminateExternalApp
 @TerminateReport
@@ -803,20 +834,24 @@
 @TriggerContentGeneration
 @TriggerCx
 @TriggerIncrementalLoad
+@UWITempDirectory
 @UnloadToolset
 @UnstackMemory
 @UpdateCodeBase
 @UpdateIndexEntries
 @UpdateIndexEntriesRT
+@UpdateProgressIndicator
 @UpdateSessionStartTime
 @UpdateWorkingIndicator
 @Valid
 @ValidElement
 @ValidElementExtToInt
 @ValidExtToInt
+@ValidOID
 @VerifyANPService
 @VerifyProgressiveConversion
 @WPLAccelerator
+@WPLBrowserInfo
 @WPLCastArray
 @WPLCastBoolean
 @WPLCastMap
@@ -825,31 +860,42 @@
 @WPLCastRecursiveArray
 @WPLData
 @WPLDisplay
+@WPLDraggable
+@WPLDropTarget
+@WPLFeaturesAvailable
 @WPLGetClientGuid
 @WPLHash
 @WPLMode
 @WPLReferenceExternal
 @WPLReferenceInternal
+@WPLSetHtmlTitle
 @WPLTopLevelObject
 @WaitForProcess
 @WaitForProcessRaw
 @WebAppServerLog
 @WebBreak
+@WebCaptureImage
 @WebClearSelectValues
+@WebGetInitialQueryString
 @WebLogoff
 @WebMeditorInsert
 @WebOpenFileUploadDialog
 @WebOpenPrintDialog
 @WebPdfView
 @WebPdfViewCleanup
+@WebPutInitialQueryString
 @WebRegisterFile
 @WebSchGridEventLowlight
 @WebSchGridSetScrollPos
+@WebSessionForceLogoff
+@WebSessionMenuDialog
 @WebSessionResume
 @WebSessionResumeFailed
 @WebSessionSuspend
 @WebUnregisterFile
+@WebUpdateCredentials
 @WindowDrawn
 @WithinNestedLookup
 @WriteLogEvent
 @WritePrintStream
+@WriteTCPProxyReturnQueue

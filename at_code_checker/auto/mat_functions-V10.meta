@@ -363,6 +363,7 @@
 @Hang
 @HasConversionAlreadyRun
 @Hash
+@HashFile
 @HideWorkingIndicator
 @ImageAppend
 @ImageAppendEnd
@@ -641,8 +642,10 @@
 @SetFooterButtonState
 @SetGraphColor
 @SetGraphFont
+@SetIPCAppBitFlag
 @SetImageScaling
 @SetImportFlag
+@SetMImageLib
 @SetMenuButtonState
 @SetMenuTopIcon
 @SetNetworkZone

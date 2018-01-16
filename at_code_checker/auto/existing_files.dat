@@ -11,6 +11,7 @@ I18N_rings.meta
 MT16X16.ICO
 Y32.dll
 _svn.dll
+at.pyd
 b.pyd
 de_checker.bat
 de_checker.exe
@@ -21,6 +22,7 @@ di_.pyd
 dlls_to_exclude.meta
 e30u_net_vc90.dll
 e30u_vc90.dll
+es.pyd
 et.pyd
 existing_files.dat
 fs_functions-V10.meta
@@ -71,6 +73,7 @@ pen.exe
 pyd
 r-1.dll
 release_name.meta
+rf-1.dll
 riconv-1.dll
 rutil-1.dll
 ry.zip
