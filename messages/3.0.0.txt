@@ -1,0 +1,3 @@
+Fixes M-AT Linter for SublimeLinter 4.
+
+Also improves some error and warning matching.

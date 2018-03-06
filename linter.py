@@ -72,9 +72,12 @@ class At_code_checker(Linter):
         r"(?P<message>(("
         r"(?P<warning>Subroutine|Line|Local variable|Do not call|List member|"
         r"Unusual result type,|Unknown formal doc keyword:|Avoid|"
-        r"Button with no defined|Unassigned #Local|Use @OV rather than)|"
+        r"Button with no defined|Unassigned #Local|Use @OV rather than|"
+        r"#Local|Double commas|Use message functions)|"
         r"(?P<error>(Unknown M-AT function|Unknown attribute - [^ ]+? [^ ]+|"
-        r"Undefined #Local))"
+        r"Undefined #Local|Un-referenced #Local|@HV without|"
+        r"Too many translation arguments to|"
+        r"System variable should only be modified by MIS or FOC utilities -))"
         r") "
         r"(?P<near>[^ (]+).*|.+))"
     )
@@ -123,6 +126,20 @@ class At_code_checker(Linter):
 
         """
         match, line, col, error, warning, message, near = super().split_match(match)
+
+        no_doc_index = message.find("has no :Doc")
+        if no_doc_index > 0:
+            error = False
+            warning = "Warning"
+            near = message[:no_doc_index].strip()
+        elif message.startswith("@HV"):
+            near = "@HV"
+
+        if error:
+            error = "Error"
+        elif warning:
+            warning = "Warning"
+
         if (match is None) or match.group('filename').startswith('atcc-'):
             return match, line, col, error, warning, message, near
 
@@ -183,7 +200,7 @@ class At_code_checker(Linter):
             else:
                 cmd.append(temp.name)
 
-            out = util.popen(cmd, output_stream=util.STREAM_STDOUT, extra_env=self.env)
+            out = util.popen(cmd, output_stream=util.STREAM_STDOUT)
 
             if out:
                 out = out.communicate()
