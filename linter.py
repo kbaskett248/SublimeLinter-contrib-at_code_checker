@@ -9,6 +9,7 @@
 #
 
 """This module exports the At_code_checker plugin class."""
+from contextlib import contextmanager
 import errno
 import logging
 import os
@@ -73,7 +74,7 @@ class At_code_checker(Linter):
         r"(?P<warning>Subroutine|Line|Local variable|Do not call|List member|"
         r"Unusual result type,|Unknown formal doc keyword:|Avoid|"
         r"Button with no defined|Unassigned #Local|Use @OV rather than|"
-        r"#Local|Double commas|Use message functions)|"
+        r"#Local|Double commas|Use message functions|There is a TODO or XXX)|"
         r"(?P<error>(Unknown M-AT function|Unknown attribute - [^ ]+? [^ ]+|"
         r"Undefined #Local|Un-referenced #Local|@HV without|"
         r"Too many translation arguments to|"
@@ -179,34 +180,47 @@ class At_code_checker(Linter):
         elif '!DictionarySource' in self.filename:
             return ''
 
-        temp = None
+        with self._make_temp_file(code) as temp_path:
+            cmd = list(cmd)
 
+            if '@' in cmd:
+                cmd[cmd.index('@')] = temp_path
+            else:
+                cmd.append(temp_path)
+
+            return self._communicate(cmd)
+
+    @contextmanager
+    def _make_temp_file(self, code):
+        """A context manage to create a temp file for the linter to run on.
+
+        Create a temp file with the same universe and ring as the current
+        file, and write the specified code to it.
+
+        When leaving the context manage, delete the file.
+
+        Arguments:
+            code: str: The code to write to the file
+
+        Returns:
+            str: The path to the temp file.
+
+        """
+        temp = None
         try:
             with tempfile.NamedTemporaryFile(prefix='atcc-',
                                              suffix='.focus',
                                              delete=False,
                                              dir=self.tmpdir()) as temp:
+
+                logger.debug("'temp_file=%s", temp.name)
+
                 if isinstance(code, str):
                     code = code.encode('utf-8')
 
                 temp.write(code)
                 temp.flush()
-
-            logger.debug("'temp_file=%s", temp.name)
-            cmd = list(cmd)
-
-            if '@' in cmd:
-                cmd[cmd.index('@')] = temp.name
-            else:
-                cmd.append(temp.name)
-
-            out = util.popen(cmd, output_stream=util.STREAM_STDOUT)
-
-            if out:
-                out = out.communicate()
-                return util.combine_output(out)
-            else:
-                return ''
+            yield temp.name
         finally:
             if temp:
                 os.remove(temp.name)

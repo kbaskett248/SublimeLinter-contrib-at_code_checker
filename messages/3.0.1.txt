@@ -1,0 +1,1 @@
+Compatibility fix for SublimeLinter 4.3.0.
