@@ -93,12 +93,23 @@ class At_code_checker(Linter):
     @classmethod
     def which(cls, cmd):
         """Return the path for the linter executable."""
-        logger.debug(cmd)
-        return cls.local_install(cmd)
+        return cls.mtad_path(cmd) or cls.bundled_path(cmd)
 
-    def local_install(cmd):
+    @staticmethod
+    def mtad_path(cmd):
+        linter_path = os.path.expandvars(os.path.join(
+            "%PROGRAMFILES(X86)%", "MEDITECH", "M-AT Tools",
+            "M-AT_Code_Checker", cmd + ".exe"))
+        logger.debug('mtad path=%s', linter_path)
+        if os.path.exists(linter_path):
+            return linter_path
+        else:
+            return None
+
+    @staticmethod
+    def bundled_path(cmd):
         linter_path = os.path.join(get_linter_path(), cmd + '.exe')
-        logger.debug(linter_path)
+        logger.debug('bundled_path=%s', linter_path)
 
         if not os.path.exists(linter_path):
             return None
