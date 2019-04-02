@@ -154,9 +154,11 @@ class At_code_checker(Linter):
             near = "@HV"
 
         if error:
-            error = "Error"
+            error = " "
         elif warning:
-            warning = "Warning"
+            warning = " "
+        else:
+            error = " "
 
         if (match is None) or match.group('filename').startswith('atcc-'):
             return match, line, col, error, warning, message, near
