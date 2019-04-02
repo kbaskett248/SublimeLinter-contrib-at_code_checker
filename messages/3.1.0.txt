@@ -1,0 +1,15 @@
+This version deprecates the bundled version of AT Code Checker that
+comes with this extension. The Linter will now prefer the official version of 
+AT Code Checker installed with the mtad. 
+
+The mtad version is installed at C:\Program Files (x86)\MEDITECH\M-AT Tools\M-AT_Code_Checker.
+If you do not have this installation, you can follow the installation
+instructions at https://docs.google.com/document/d/1BQFGeg9pmIFmmQr2CPjIwRI_A4_LdhfRXwhWcJ3nM9s/edit.
+You only need to follow steps 1 and 2. After doing so, updating AT Code Checker
+is as simple as running the mtad again.
+
+This will make it easier to use the most up-to-date version of AT Code Checker,
+and it will shrink the size of this extension.
+
+The bundled version will continue to be included for the next few months to
+provide time for everyone to transition.
