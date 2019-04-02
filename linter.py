@@ -61,11 +61,25 @@ def get_possible_paths():
     yield ('bundled', get_bundled_linter_path())
 
 
+def get_exe_path(exe):
+    """Return the first path found for the executable.
+
+    If the bundled path is returned, also log a deprecation warning.
+
+    """
+    for type_, path in get_possible_paths():
+        full_path = os.path.join(path, exe)
+        if os.path.exists(full_path):
+            if type_ == 'bundled':
+                bundled_warning()
+            return full_path
+    return None
+
 def bundled_warning():
     logger.warning(
-        "Using bundled version of the AT Code Checker. This version is out "
-        "of date. Please install the mtad version. Instructions can be "
-        "found here: "
+        "Deprecated: Using bundled version of the AT Code Checker. This "
+        "version is out of date. Please install the mtad version. "
+        "Instructions can be found here: "
         "https://docs.google.com/document/d/1BQFGeg9pmIFmmQr2CPjIwRI_A4_LdhfRXwhWcJ3nM9s/edit")
 
 
@@ -119,33 +133,7 @@ class At_code_checker(Linter):
     @classmethod
     def which(cls, cmd):
         """Return the path for the linter executable."""
-        return cls.mtad_path(cmd) or cls.bundled_path(cmd)
-
-    @staticmethod
-    def mtad_path(cmd):
-        linter_path = os.path.expandvars(os.path.join(
-            "%PROGRAMFILES(X86)%", "MEDITECH", "M-AT Tools",
-            "M-AT_Code_Checker", cmd + ".exe"))
-        logger.debug('mtad path=%s', linter_path)
-        if os.path.exists(linter_path):
-            return linter_path
-        else:
-            return None
-
-    @staticmethod
-    def bundled_path(cmd):
-        linter_path = os.path.join(get_bundled_linter_path(), cmd + '.exe')
-        logger.debug('bundled_path=%s', linter_path)
-
-        if not os.path.exists(linter_path):
-            return None
-        else:
-            logger.warning("Using bundled version of the AT Code Checker. "
-                           "This version is out of date. Please install the "
-                           "mtad version. Instructions can be found here: "
-                           "https://docs.google.com/document/d/"
-                           "1BQFGeg9pmIFmmQr2CPjIwRI_A4_LdhfRXwhWcJ3nM9s/edit")
-            return linter_path
+        return get_exe_path(cmd + '.exe')
 
     def split_match(self, match):
         """Extracts data from each error result returned from the command.
@@ -355,14 +343,9 @@ class ConfigureCodeCheckerCommand(sublime_plugin.ApplicationCommand):
 
     def run(self):
         """Run the configuration utility for AT Code Checker."""
-        for type_, path in get_possible_paths():
-            config_path = os.path.join(path, 'configuration.exe')
-
-            if os.path.exists(config_path):
-                subprocess.Popen(config_path)
-                if type_ == 'bundled':
-                    bundled_warning()
-                break
+        config_path = get_exe_path('configuration.exe')
+        if config_path:
+            subprocess.Popen(config_path)
 
 
 class OpenWebPageCommand(sublime_plugin.WindowCommand):
