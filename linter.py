@@ -66,7 +66,6 @@ class At_code_checker(Linter):
 
     """Provides an interface to at_code_checker."""
 
-    syntax = ('m-at', 'focus')
     cmd = 'at_code_checker @'
     regex = (
         r"^(?P<filename>.+?) +(?P<line>\d+) : "
@@ -85,8 +84,7 @@ class At_code_checker(Linter):
     line_col_base = (1, 1)
     tempfile_suffix = 'atcc'
     error_stream = util.STREAM_BOTH
-    selectors = {}
-    defaults = {}
+    defaults = {"selector": "source.focus"}
 
     Dir_Map = dict()
 
