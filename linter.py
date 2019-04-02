@@ -94,12 +94,20 @@ class At_code_checker(Linter):
     def which(cls, cmd):
         """Return the path for the linter executable."""
         logger.debug(cmd)
+        return cls.local_install(cmd)
+
+    def local_install(cmd):
         linter_path = os.path.join(get_linter_path(), cmd + '.exe')
         logger.debug(linter_path)
 
         if not os.path.exists(linter_path):
             return None
         else:
+            logger.warning("Using bundled version of the AT Code Checker. "
+                           "This version is out of date. Please install the "
+                           "mtad version. Instructions can be found here: "
+                           "https://docs.google.com/document/d/"
+                           "1BQFGeg9pmIFmmQr2CPjIwRI_A4_LdhfRXwhWcJ3nM9s/edit")
             return linter_path
 
     def split_match(self, match):
