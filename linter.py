@@ -25,14 +25,26 @@ import sublime_plugin
 from SublimeLinter.lint import Linter, util
 
 logger = logging.getLogger(__name__)
+logger.setLevel('DEBUG')
 
 RING_MATCHER = re.compile(
     r"((.*?\\([^:\\\/\n]+?)\.Universe)\\([^:\\\/\n]+?)\.Ring)(?![^\\])",
     re.IGNORECASE)
 
 
-def get_linter_path():
-    """Return the path that contains the AT Code Checker executable.
+def get_mtad_linter_path():
+    """Return the path containing the mtad AT Code Checker executable.
+
+    Return:
+        str: Path containing at_code_checker.exe
+
+    """
+    return os.path.expandvars(os.path.join(
+        "%PROGRAMFILES(X86)%", "MEDITECH", "M-AT Tools", "M-AT_Code_Checker"))
+
+
+def get_bundled_linter_path():
+    """Return the path that contains the bundled AT Code Checker executable.
 
     Return:
         str: Path that containat_code_checker.exe
@@ -41,6 +53,20 @@ def get_linter_path():
     return os.path.join(sublime.packages_path(),
                         'SublimeLinter-contrib-at_code_checker',
                         'at_code_checker')
+
+
+def get_possible_paths():
+    """Return possible paths for the linter."""
+    yield ('mtad', get_mtad_linter_path())
+    yield ('bundled', get_bundled_linter_path())
+
+
+def bundled_warning():
+    logger.warning(
+        "Using bundled version of the AT Code Checker. This version is out "
+        "of date. Please install the mtad version. Instructions can be "
+        "found here: "
+        "https://docs.google.com/document/d/1BQFGeg9pmIFmmQr2CPjIwRI_A4_LdhfRXwhWcJ3nM9s/edit")
 
 
 def create_dir(dir_):
@@ -108,7 +134,7 @@ class At_code_checker(Linter):
 
     @staticmethod
     def bundled_path(cmd):
-        linter_path = os.path.join(get_linter_path(), cmd + '.exe')
+        linter_path = os.path.join(get_bundled_linter_path(), cmd + '.exe')
         logger.debug('bundled_path=%s', linter_path)
 
         if not os.path.exists(linter_path):
@@ -329,10 +355,14 @@ class ConfigureCodeCheckerCommand(sublime_plugin.ApplicationCommand):
 
     def run(self):
         """Run the configuration utility for AT Code Checker."""
-        configuration_path = os.path.join(get_linter_path(), 'configuration.exe')
+        for type_, path in get_possible_paths():
+            config_path = os.path.join(path, 'configuration.exe')
 
-        if os.path.exists(configuration_path):
-            subprocess.Popen(configuration_path)
+            if os.path.exists(config_path):
+                subprocess.Popen(config_path)
+                if type_ == 'bundled':
+                    bundled_warning()
+                break
 
 
 class OpenWebPageCommand(sublime_plugin.WindowCommand):
