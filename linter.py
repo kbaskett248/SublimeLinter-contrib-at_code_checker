@@ -106,6 +106,7 @@ class At_code_checker(Linter):
 
     """Provides an interface to at_code_checker."""
 
+    name = "CodeChecker"
     cmd = 'at_code_checker @'
     regex = (
         r"^(?P<filename>.+?) +(?P<line>\d+) : "
